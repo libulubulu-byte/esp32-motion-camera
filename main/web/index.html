@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESP32-S3 Snapshot Kit</title>
+<style>
+  :root {
+    --bg: #0f1419; --card: #1a2029; --line: #2a323d;
+    --fg: #e6edf3; --muted: #8b949e; --ok: #3fb950; --warn: #d29922; --err: #f85149; --acc: #58a6ff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 14px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  header { padding: 18px 20px; border-bottom: 1px solid var(--line);
+           display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  h1 { font-size: 17px; margin: 0; font-weight: 600; }
+  .pill { padding: 3px 10px; border-radius: 999px; font-size: 12px;
+          border: 1px solid var(--line); color: var(--muted); }
+  .pill.on  { color: var(--ok);  border-color: #23543a; background: #10281a; }
+  .pill.off { color: var(--warn); border-color: #4a3a12; background: #2a2210; }
+  .pill.bad { color: var(--err); border-color: #5c2320; background: #2c1414; }
+  main { padding: 16px 20px 40px; display: grid; gap: 16px;
+         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 1400px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .card h2 { font-size: 13px; margin: 0 0 12px; color: var(--muted);
+             text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+  .row { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0;
+         border-bottom: 1px dashed #232b35; }
+  .row:last-child { border-bottom: 0; }
+  .row span:first-child { color: var(--muted); }
+  .row span:last-child { font-variant-numeric: tabular-nums; text-align: right;
+                        overflow-wrap: anywhere; }
+  button { background: #21262d; color: var(--fg); border: 1px solid var(--line);
+           border-radius: 7px; padding: 8px 14px; cursor: pointer; font-size: 13px; }
+  button:hover { background: #2d333b; border-color: #444c56; }
+  button.primary { background: #1f6feb; border-color: #1f6feb; }
+  button.primary:hover { background: #388bfd; }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  .btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  #shot { width: 100%; border-radius: 8px; background: #000; display: block; min-height: 120px; }
+  input, select { width: 100%; background: #0d1117; color: var(--fg); border: 1px solid var(--line);
+                 border-radius: 6px; padding: 7px 9px; font-size: 13px; }
+  label { display: block; font-size: 12px; color: var(--muted); margin: 9px 0 3px; }
+  pre { background: #0d1117; border: 1px solid var(--line); border-radius: 8px;
+        padding: 10px; max-height: 320px; overflow: auto; font-size: 12px; margin: 0; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  footer { padding: 0 20px 30px; color: var(--muted); font-size: 12px; }
+  details { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin-bottom: 10px; }
+  details[open] { padding-bottom: 12px; }
+  summary { cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 600;
+           text-transform: uppercase; letter-spacing: .06em; }
+  .hint { font-size: 12px; color: var(--muted); margin: 10px 0 0; }
+  .warn { background: #2a2210; border: 1px solid #4a3a12; color: var(--warn);
+         border-radius: 8px; padding: 9px 12px; font-size: 12.5px;
+         line-height: 1.6; margin-bottom: 10px; }
+  .warn b { color: #f0c674; }
+  /* Version line at the top of the live-view card: monospace so the flashed
+     version is unmistakable at a glance. */
+  .fwline { font-family: ui-monospace, Consolas, monospace; font-size: 12.5px;
+           color: #9fd0a0; background: #1b2320; border: 1px solid #2b3a33;
+           border-radius: 6px; padding: 6px 10px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ESP32-S3 Snapshot Kit</h1>
+  <span class="pill" id="p-mode">--</span>
+  <span class="pill" id="p-armed">--</span>
+  <span class="pill" id="p-ip">--</span>
+  <span class="pill" id="p-fw">--</span>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Latest snapshot</h2>
+    <img id="shot" alt="Last snapshot" src="" />
+    <div class="btns">
+      <button class="primary" id="btn-snap">Capture now</button>
+      <button id="btn-reload">Reload image</button>
+      <button id="btn-arm">Arm</button>
+      <button id="btn-disarm">Disarm</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Live view (MJPEG)</h2>
+    <!-- The version is repeated here on purpose: someone watching the live view
+         (field debugging, delivery acceptance) does not scroll up to the status
+         pills, yet "which build is flashed" must be confirmed every time.
+         live-fw is filled by refreshStatus(), same source as the p-fw pill
+         (both come from /api/status). -->
+    <div id="live-fw" class="fwline">Firmware: --</div>
+    <img id="live" alt="Click Start to load the live view" src="" />
+    <div class="btns">
+      <button class="primary" id="btn-live">Start</button>
+      <button id="btn-live-stop">Stop</button>
+    </div>
+    <p style="font-size:12px;color:#888;margin:8px 0 0">
+      The live stream takes exclusive ownership of the camera, so "Capture now"
+      cannot get a frame while it runs. Click "Stop" before leaving this page.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Status</h2>
+    <!-- "not configured" and "configured but failing" must stay visibly distinct.
+         APP_HTTP_URL defaults to empty: the firmware then logs a single
+         "http skipped" line (not a failure) and photos stay on the SD card,
+         while the ok/fail counters below stay at 0 - which looks identical to
+         a healthy setup and is easily misread as "HTTP upload is broken". -->
+    <div id="warn-box" class="warn" style="display:none"></div>
+    <div id="status-rows"></div>
+  </section>
+
+  <section class="card">
+    <h2>Configuration (secrets masked)</h2>
+
+    <details open>
+      <summary>Network / reporting</summary>
+      <div class="grid2">
+        <div><label>Wi-Fi SSID</label><input id="c-wifi_ssid" placeholder="(blank = keep)"></div>
+        <div><label>Wi-Fi password</label><input id="c-wifi_pass" type="password" placeholder="(blank = keep)"></div>
+        <div><label>Upload mode</label>
+          <select id="c-upload_mode">
+            <option value="http">http</option><option value="telegram">telegram</option>
+            <option value="both">both</option><option value="off">off</option>
+          </select></div>
+        <div><label>Admin Key (needed to change config)</label><input id="c-admin_key" type="password" placeholder="X-Admin-Key"></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>MQTT</summary>
+      <div class="grid2">
+        <div><label>Broker URI (port fixed at 1883; empty = MQTT disabled)</label><input id="c-mqtt_uri" placeholder="mqtt://192.168.0.101:1883"></div>
+        <div><label>MQTT username</label><input id="c-mqtt_user" placeholder="(blank = keep)"></div>
+        <div><label>MQTT password</label><input id="c-mqtt_pass" type="password" placeholder="(blank = keep)"></div>
+      </div>
+      <p class="hint">The topic is generated as &lt;prefix&gt;/&lt;MAC&gt;/event; the prefix lives in app_conf.h. Clearing the URI keeps MQTT disabled across reboots.</p>
+    </details>
+
+    <details>
+      <summary>HTTP upload</summary>
+      <div class="grid2">
+        <div><label>Upload URL</label><input id="c-http_url" placeholder="http://server:8080/upload"></div>
+        <div><label>Header name</label><input id="c-http_header_key" placeholder="X-Device-Key"></div>
+        <div><label>Header value</label><input id="c-http_header_value" type="password" placeholder="(blank = keep)"></div>
+      </div>
+      <p class="hint">&#9888;&#65039; The factory default is <b>empty = no upload</b> (the firmware only logs <code>http skipped</code> and photos stay on the SD card).
+         To enable it you must enter a full URL, for example <code>http://192.168.0.101:8080/upload</code>,
+         and "Upload mode" must be http or both. Saved changes apply immediately, no reboot required.</p>
+    </details>
+
+    <details>
+      <summary>Telegram</summary>
+      <div class="grid2">
+        <div><label>Bot Token</label><input id="c-telegram_token" type="password" placeholder="(blank = keep)"></div>
+        <div><label>Chat ID</label><input id="c-telegram_chat_id" placeholder="(blank = keep)"></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Trigger / image</summary>
+      <div class="grid2">
+        <div><label>Trigger cooldown (ms)</label><input id="c-min_trigger_interval_ms" type="number"></div>
+        <div><label>Timer capture (ms, 0 = off)</label><input id="c-timer_interval_ms" type="number"></div>
+        <div><label>PIR debounce (ms)</label><input id="c-pir_debounce_ms" type="number"></div>
+        <div><label>PIR active level (1/0)</label><input id="c-pir_active_level" type="number"></div>
+        <div><label>Flash warm-up (ms)</label><input id="c-flash_before_ms" type="number"></div>
+        <div><label>Retake if frame looks bad (1/0)</label><input id="c-retake_on_bad" type="number"></div>
+        <div><label>JPEG quality 4-63</label><input id="c-jpeg_quality" type="number"></div>
+        <div><label>Resolution (framesize 6-21)</label><input id="c-frame_size" type="number" placeholder="10 = VGA (default)"></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Queue / SD / time / OTA</summary>
+      <div class="grid2">
+        <div><label>Queue policy</label>
+          <select id="c-queue_policy">
+            <option value="drop_new">drop_new</option><option value="drop_oldest">drop_oldest</option>
+          </select></div>
+        <div><label>Max queue length 2-16</label><input id="c-max_queue_len" type="number"></div>
+        <div><label>SD low-space threshold (MB)</label><input id="c-sd_low_space_mb" type="number"></div>
+        <div><label>Timezone</label><input id="c-timezone" placeholder="CST-8"></div>
+        <div><label>NTP server</label><input id="c-ntp_server"></div>
+        <div><label>OTA URL</label><input id="c-ota_url"></div>
+      </div>
+    </details>
+
+    <div class="btns">
+      <button class="primary" id="btn-save">Save config</button>
+      <button id="btn-reset">Factory reset</button>
+      <button id="btn-sd">SD remount</button>
+      <button id="btn-reboot">Reboot</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Events (last 50)</h2>
+    <pre id="events">--</pre>
+    <div class="btns"><button id="btn-events">Refresh</button></div>
+  </section>
+
+  <section class="card">
+    <h2>Log (last 80 lines)</h2>
+    <pre id="log">--</pre>
+    <div class="btns"><button id="btn-log">Refresh</button></div>
+  </section>
+</main>
+
+<footer>mDNS: <b>esp32s3cam.local</b> &middot; Changing config requires an X-Admin-Key matching the device admin_key</footer>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let adminKey = () => $('c-admin_key').value.trim();
+// Most recent /api/config result. The warning box inside refreshStatus needs it
+// to detect "channel enabled but parameter empty" (/api/status carries
+// upload_mode only, never http_url).
+const state = { config: {} };
+
+async function api(path, opts) {
+  opts = opts || {};
+  opts.headers = Object.assign({}, opts.headers);
+  const k = adminKey();
+  if (k) opts.headers['X-Admin-Key'] = k;
+  const r = await fetch(path, opts);
+  const text = await r.text();
+  let data; try { data = JSON.parse(text); } catch (e) { data = { raw: text }; }
+  if (!r.ok) throw Object.assign(new Error((data && data.error) || r.status), { status: r.status, data });
+  return data;
+}
+
+function rows(el, obj) {
+  el.innerHTML = '';
+  for (const [k, v] of Object.entries(obj)) {
+    if (typeof v === 'object') continue;
+    const d = document.createElement('div'); d.className = 'row';
+    d.innerHTML = '<span>' + k + '</span><span>' + String(v) + '</span>';
+    el.appendChild(d);
+  }
+}
+
+function pill(id, text, cls) {
+  const el = $(id);
+  el.textContent = text;
+  el.className = 'pill' + (cls ? ' ' + cls : '');
+}
+
+async function refreshStatus() {
+  try {
+    const s = await api('/api/status');
+    pill('p-mode', s.wifi.mode, s.wifi.mode === 'sta_connected' ? 'on' : 'off');
+    pill('p-armed', s.armed ? 'ARMED' : 'DISARMED', s.armed ? 'on' : 'off');
+    pill('p-ip', s.wifi.ip, '');
+    pill('p-fw', 'v' + s.fw_version, s.safe_mode ? 'bad' : '');
+    // Same version string, shown again in the live-view card. The running
+    // partition is appended because it is direct evidence of whether an OTA
+    // actually landed: an upgraded unit reports ota_0/ota_1, not factory.
+    const liveFw = $('live-fw');
+    if (liveFw) {
+      liveFw.textContent = 'Firmware: v' + s.fw_version
+        + (s.running_partition ? '   Partition: ' + s.running_partition : '')
+        + '   Device: ' + s.device_id;
+    }
+    rows($('status-rows'), {
+      'device_id': s.device_id,
+      'safe_mode': s.safe_mode,
+      'sensor': s.camera.sensor + ' (' + s.camera.framesize_name + ')',
+      'sd.state': s.sd.state,
+      'sd.free': s.sd.free_kb + ' KB',
+      'queue': s.queue.len + ' / ' + s.queue.mode,
+      'queue ok/fail/drop': s.queue.ok_count + '/' + s.queue.fail_count + '/' + s.queue.drop_count,
+      'trigger': s.trigger.state,
+      'trigger count': s.trigger.count,
+      'snapshot ok/fail': s.snapshot.ok_count + '/' + s.snapshot.fail_count,
+      'free heap': s.system.free_heap,
+      'free psram': s.system.free_psram,
+      'time_valid': s.system.time_valid,
+      'uptime (s)': Math.round(s.uptime_ms / 1000),
+      'mqtt': s.system.mqtt,
+    });
+    warnBox(s);
+  } catch (e) {
+    pill('p-mode', 'offline: ' + e.message, 'bad');
+  }
+}
+
+// Call out configuration combinations that fail silently. In all of these the
+// firmware only emits one W-level log line, the counters stay put, and the page
+// looks exactly like a healthy setup:
+//   - upload_mode=http/both with an empty http_url -> every capture ends in
+//     "http skipped", photos stay on the SD card, ok/fail stay 0 - which is
+//     easily mistaken for "HTTP upload is broken".
+//   - upload_mode=telegram/both with an incomplete token/chat_id -> same story.
+//   - neither channel configured -> falls back to no_channel, events only enter
+//     the ring buffer and never leave the device.
+function warnBox(s) {
+  const box = $('warn-box');
+  const cfg = state.config || {};
+  const mode = s.system.upload_mode || cfg.upload_mode || '';
+  const msgs = [];
+
+  if (mode === 'http' || mode === 'both') {
+    if (!cfg.http_url) {
+      msgs.push('The HTTP channel is enabled but the <b>upload URL is empty</b>, so every capture only logs '
+                + '<code>http skipped</code> and the photo stays on the SD card. '
+                + 'Fill in http://&lt;host-ip&gt;:8080/upload under "HTTP upload" and save.');
+    }
+  }
+  if (mode === 'telegram' || mode === 'both') {
+    if (!cfg.telegram_token || !cfg.telegram_chat_id) {
+      msgs.push('The Telegram channel is enabled but token / chat_id are incomplete, so this channel is skipped.');
+    }
+  }
+  if (mode === 'off') {
+    msgs.push('Upload mode is <b>off</b>: captures are not reported anywhere.');
+  }
+
+  if (msgs.length) {
+    box.innerHTML = msgs.join('<br>');
+    box.style.display = '';
+  } else {
+    box.style.display = 'none';
+  }
+}
+
+// Secret fields: GET /api/config returns the masked value "***", which must
+// NEVER be written back into an input - saving it would overwrite the real
+// secret with the literal string "***". Their semantics are fixed at
+// "empty input = leave unchanged".
+const SECRET_FIELDS = ['wifi_pass', 'admin_key', 'http_header_value',
+                       'telegram_token', 'mqtt_pass'];
+
+// Non-secret fields: safe to refill (order here is unrelated to the form order)
+const PLAIN_FIELDS = ['wifi_ssid', 'upload_mode',
+                      'mqtt_uri', 'mqtt_user',
+                      'http_url', 'http_header_key', 'telegram_chat_id',
+                      'min_trigger_interval_ms', 'timer_interval_ms',
+                      'pir_debounce_ms', 'pir_active_level', 'flash_before_ms',
+                      'retake_on_bad',
+                      'jpeg_quality', 'frame_size',
+                      'queue_policy', 'max_queue_len', 'sd_low_space_mb',
+                      'timezone', 'ntp_server', 'ota_url'];
+
+async function loadConfig() {
+  try {
+    const c = await api('/api/config');
+    for (const k of PLAIN_FIELDS) {
+      const el = $('c-' + k);
+      if (el && c[k] !== undefined) el.value = c[k];
+    }
+    // Secret inputs only hint whether a value exists, they never receive it
+    for (const k of SECRET_FIELDS) {
+      const el = $('c-' + k);
+      if (el) el.placeholder = c[k] ? 'configured (blank = keep)' : '(not set)';
+    }
+    pill('p-armed', c.armed ? 'ARMED' : 'DISARMED', c.armed ? 'on' : 'off');
+    state.config = c;
+    return c;
+  } catch (e) { console.warn('config load failed', e); return {}; }
+}
+
+async function snap() {
+  $('btn-snap').disabled = true;
+  try {
+    await api('/api/snapshot', { method: 'POST' });
+    setTimeout(() => { $('shot').src = '/api/last_snapshot?t=' + Date.now(); $('btn-snap').disabled = false; }, 2500);
+  } catch (e) {
+    alert('Capture failed: ' + e.message); $('btn-snap').disabled = false;
+  }
+}
+
+async function saveConfig() {
+  const body = {};
+  // Plain fields: empty = do not submit (keep the stored value)
+  for (const k of PLAIN_FIELDS) {
+    const el = $('c-' + k);
+    if (el && el.value !== '') body[k] = (el.type === 'number') ? Number(el.value) : el.value;
+  }
+  // Secret fields: empty = do not submit (keep the stored value, so "***" is never written back)
+  for (const k of SECRET_FIELDS) {
+    const el = $('c-' + k);
+    if (el && el.value !== '') body[k] = el.value;
+  }
+  // mqtt_uri is special: an explicit empty string means "disable MQTT".
+  // The backend's apply_json only overwrites keys that are present, so sending
+  // an empty string differs from omitting the key - that is what lets
+  // "clear = disable" and "blank = keep" coexist.
+  const uriEl = $('c-mqtt_uri');
+  if (uriEl && uriEl.value.trim() === '') body.mqtt_uri = '';
+
+  try {
+    await api('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                               body: JSON.stringify(body) });
+    alert('Saved');
+    loadConfig();
+    refreshStatus();
+  } catch (e) {
+    alert('Save failed: ' + e.message + (e.status === 401 ? ' (wrong Admin Key)' : ''));
+  }
+}
+
+async function loadEvents() {
+  try { $('events').textContent = JSON.stringify(await api('/api/events'), null, 1); }
+  catch (e) { $('events').textContent = 'error: ' + e.message; }
+}
+
+async function loadLog() {
+  try {
+    const d = await api('/api/log');
+    const lines = Array.isArray(d) ? d : (d.lines || []);
+    $('log').textContent = lines.join('\n');
+  } catch (e) { $('log').textContent = 'error: ' + e.message; }
+}
+
+$('btn-snap').onclick = snap;
+$('btn-reload').onclick = () => { $('shot').src = '/api/last_snapshot?t=' + Date.now(); };
+// Live view: it must live inside an <img> to keep streaming - navigating
+// straight to a multipart/x-mixed-replace URL does not render in Chrome/Edge.
+// Stop uses removeAttribute instead of src='' so the browser does not re-request
+// the current page as if it were the image.
+$('btn-live').onclick = () => { $('live').src = '/api/stream?t=' + Date.now(); };
+$('btn-live-stop').onclick = () => { $('live').removeAttribute('src'); };
+// Tear the stream down when the page is closed or reloaded. Without this the
+// browser only sends a FIN, and the device-side stream handler keeps running
+// until its next send fails (roughly 100 ms to 8 s), holding a socket and the
+// camera the whole time. Repeated page open/close cycles accumulate those and
+// eventually exhaust the httpd socket pool (ping works, every HTTP request
+// times out).
+window.addEventListener('beforeunload', () => { $('live').removeAttribute('src'); });
+$('btn-arm').onclick = async () => { await api('/api/arm', { method: 'POST' }); refreshStatus(); };
+$('btn-disarm').onclick = async () => { await api('/api/disarm', { method: 'POST' }); refreshStatus(); };
+$('btn-save').onclick = saveConfig;
+$('btn-sd').onclick = async () => {
+  try { alert(JSON.stringify(await api('/api/sd/remount', { method: 'POST' }))); }
+  catch (e) { alert('Failed: ' + e.message); }
+};
+$('btn-reboot').onclick = async () => {
+  if (!confirm('Reboot the device?')) return;
+  try { await api('/api/reboot', { method: 'POST' }); } catch (e) {}
+  alert('Reboot command sent');
+};
+$('btn-reset').onclick = async () => {
+  if (!confirm('Factory reset erases Wi-Fi / MQTT / Telegram and every other setting. Continue?')) return;
+  try {
+    await api('/api/factory_reset', { method: 'POST' });
+    alert('Factory reset done, the device will reboot');
+  } catch (e) { alert('Failed: ' + e.message); }
+};
+$('btn-events').onclick = loadEvents;
+$('btn-log').onclick = loadLog;
+
+(async function () {
+  await loadConfig();
+  await refreshStatus();
+  $('shot').src = '/api/last_snapshot?t=' + Date.now();
+  loadEvents();
+  setInterval(refreshStatus, 5000);
+})();
+</script>
+</body>
+</html>

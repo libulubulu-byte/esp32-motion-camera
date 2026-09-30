@@ -1,0 +1,1 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=1 D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM

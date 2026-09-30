@@ -1,0 +1,133 @@
+menu "Snapshot Kit"
+
+    choice CAMERA_SENSOR
+        prompt "Camera sensor (compile-time switch)"
+        default CAM_OV2640
+        help
+            编译期选定摄像头传感器，同一套代码产出三个固件。
+            禁止运行时探测切换：三个 sensor 驱动同时链接会超出 flash 并引入兼容风险。
+
+        config CAM_OV2640
+            bool "OV2640 (2MP, default)"
+
+        config CAM_OV3660
+            bool "OV3660 (3MP)"
+
+        config CAM_OV5640
+            bool "OV5640 (5MP)"
+    endchoice
+
+    config SNAP_XCLK_MHZ
+        int "XCLK MHz"
+        default 20
+        range 10 24
+        help
+            OV2640 / OV3660 用 20MHz；OV5640 可到 24MHz。
+
+    config SNAP_DEFAULT_FRAMESIZE
+        int "frame size enum (sensor.h framesize_t)"
+        default 10
+        range 5 21
+        help
+            sensor.h 的 framesize_t 枚举值。★★ 下面是按 esp32-camera **2.1.7 的
+            driver/include/sensor.h 实际枚举顺序逐个数的**，不要凭记忆写 ——
+            网上大量教程给的是旧版编号，2.1.7 多了 FRAMESIZE_128X128(2) 与
+            FRAMESIZE_320X320(7)，导致 VGA 之后的编号与常见资料对不上。
+            常用（括号里是真实枚举序号）：
+              2=128x128   3=QCIF   4=HQVGA  5=240x240  6=QVGA(320x240)
+              7=320x320   8=CIF    9=HVGA  10=VGA(640x480)
+             11=SVGA(800x600)  12=XGA(1024x768)  13=HD(1280x720)
+             14=SXGA    15=UXGA(1600x1200)  16=FHD(1920x1080)
+             17=P_HD    18=P_3MP(864x1536)  19=QXGA(2048x1536)   ← OV3660 上限
+             20=QHD     21=WQXGA  22=P_FHD  23=QSXGA  24=5MP(2592x1944) ← OV5640 上限
+            ★ 注意本工程默认 10 = **VGA 640x480**（不是 SVGA 800x600）。
+            ★ 没有 FRAMESIZE_3MP 这个枚举，3MP 对应的是 QXGA(2048x1536)。
+            超出当前传感器上限时自动 clamp 到上限并打警告。
+
+    choice SD_MODE
+        prompt "SD mode"
+        default SD_MODE_OPTIONAL
+
+        config SD_MODE_NONE
+            bool "Disable SD"
+            help
+                完全不挂载，sd_hal 全部接口返回 ESP_ERR_NOT_SUPPORTED，
+                拍到的照片一律走 PSRAM 内存队列。
+
+        config SD_MODE_OPTIONAL
+            bool "Optional, auto degrade to RAM queue"
+            help
+                有卡写卡；没卡/拔卡/连续 3 次写失败自动降级 PSRAM 队列，
+                30s 自动重挂载，拍照+上传主链路永不断。
+
+        config SD_MODE_REQUIRED
+            bool "Required, boot fail without SD"
+            help
+                启动挂载失败即红灯常亮 + 蜂鸣器，只保留 safe web 配网，不拍照。
+    endchoice
+
+    config SNAP_ENABLE_HTTP_UPLOAD
+        bool "HTTP upload"
+        default y
+
+    config SNAP_ENABLE_TELEGRAM
+        bool "Telegram notify"
+        default y
+
+    config SNAP_ENABLE_MQTT
+        bool "MQTT meta publish"
+        default n
+
+    config SNAP_ENABLE_STREAM
+        bool "MJPEG stream"
+        default n
+
+    config SNAP_ENABLE_OTA
+        bool "OTA"
+        default y
+
+    config SNAP_ENABLE_HUMAN_STUB
+        bool "Human detect stub (log only)"
+        default n
+        help
+            仅打印日志的占位实现，不做任何身份识别 / 人脸比对 / 防照片活体。
+
+    config SNAP_ENABLE_HUMAN_DETECT
+        bool "Human detect (ESP-WHO / esp-dl real model)"
+        default n
+        help
+            接入参考工程 D:\Camer_esp-who\examples\human_face_recognition_custom_s3
+            的 human_face_detect 模型（MSRMNP_S8_V1 = MSR 粗筛 + MNP 精筛）：
+            抓到照片后先跑一次人脸检测，**没检测到人**的照片直接丢弃（只记日志），
+            检测到人的才入队上传 / 落盘。
+
+            ★ 与 "Human detect stub" 的区别：stub 是假分数、不影响链路；
+              本项是**真模型推理**，并真的决定照片去留，两者应二选一。
+
+            ★ 代价（务必知悉）：
+              · Flash：模型约 1.2MB，占用独立的 human_face_det 分区（见 partitions.csv）
+              · PSRAM：模型权重 + 中间张量常驻约 700KB~1MB
+              · 时间：每张照片多花 ~100ms 做 JPEG 解码 + 两级推理
+              · 依赖：需要 espressif/human_face_detect + espressif/esp-dl（见 idf_component.yml）
+
+            ★ 能力边界：只回答"画面里有没有人脸"，**不做身份识别、不做活体防照片**。
+              侧脸、背对镜头、低头、光线太暗都可能判定为"没人"，
+              所以默认采用 fail-open：检测出错时放行（宁可多发，不要漏拍）。
+
+    config SNAP_KEEP_NONHUMAN
+        bool "Keep non-human frames on SD (but do not upload)"
+        depends on SNAP_ENABLE_HUMAN_DETECT
+        default n
+        help
+            默认（n）：检测不到人的照片直接丢弃，只在串口留一行日志。
+            打开（y）：照片仍然写进 SD 卡（便于事后回溯检测误判），
+                     但**不会**进入上传队列 —— 省流量的目的仍然达到。
+            注意本工程没有 SD 卡时会退化成 PSRAM 队列，
+            此时这一项的 y/n 没有区别（没有队列以外的落盘位置）。
+
+    config SNAP_QUEUE_MAX
+        int "Upload queue max events"
+        default 8
+        range 2 16
+
+endmenu

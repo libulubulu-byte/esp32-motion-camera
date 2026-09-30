@@ -1,0 +1,16 @@
+Command: C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe D:\ESP32-IDF\esp-idf-v5.5.1\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM\build\esp32s3_snapshot_kit.elf D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM\build\bootloader\bootloader.elf --force-color -m 'C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'D:\ESP32-IDF\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM6'
+--- WARNING: GDB cannot open serial ports accessed as COMx
+--- NOTE: Using \\.\COM6 instead...
+--- esp-idf-monitor 1.10.0 on \\.\COM6 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x403c8700: _stext at ??:?
+--- 0x403c894c: call_start_cpu0 at D:/ESP32-IDF/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c:25
+--- 0x403c8700: _stext at ??:?
+--- 0x403c894c: call_start_cpu0 at D:/ESP32-IDF/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c:25
+--- 0x403c8700: _stext at ??:?
+--- 0x403c894c: call_start_cpu0 at D:/ESP32-IDF/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c:25
+--- 0x403c8700: _stext at ??:?
+--- 0x403c894c: call_start_cpu0 at D:/ESP32-IDF/esp-idf-v5.5.1/components/bootloader/subproject/main/bootloader_start.c:25
+--- ERROR: GetOverlappedResult failed (PermissionError(13, '拒绝访问。', None, 5))
+--- Waiting for the device to reconnect.........................................................
+

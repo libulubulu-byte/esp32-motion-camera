@@ -1,0 +1,16 @@
+==================================================================
+  MQTT broker (纯 Python) 监听 0.0.0.0:1883
+  设备侧 main/app_conf.h 应填:
+      APP_MQTT_HOST  <你的局域网IP>
+      APP_MQTT_PORT  1883
+  订阅端:  python mqtt_watch.py --port 1883
+  停止:    Ctrl+C
+==================================================================
+
+[13:08:54] 连接 192.168.137.128:62694 client_id=ESP32_922F44 MQTT4 keepalive=120s user=有 pass=有 （连接数 1）
+[13:11:12] 连接 192.168.137.128:56698 client_id=ESP32_922F44 MQTT4 keepalive=120s user=有 pass=有 （连接数 2）
+[13:11:27] PUBLISH <- ESP32_922F44  topic=esp32S3_CAM/288485922F44/event  qos=0 223B
+[13:11:27]           {"device_id":"cam-2f44","event_id":1,"ts":1790572283,"time_valid":true,"boot_ms":14691,"trigger":"pir","rssi":-45,"free_heap":7798908,"free_psram":7748156,"sd_state":"FAIL","flash_used":1,"jpeg_len":14442,"sensor":"OV3660"}
+[13:14:28] 连接 127.0.0.1:53017 client_id=snapkit-watch-72468 MQTT4 keepalive=30s user=无 pass=无 （连接数 3）
+[13:14:28] SUBSCRIBE snapkit-watch-72468 -> esp32S3_CAM/+/event (qos 0)
+[13:14:33] 断开 127.0.0.1:53017 client_id=snapkit-watch-72468 （剩余连接数 2）

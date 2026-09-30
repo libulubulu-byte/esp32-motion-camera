@@ -1,0 +1,1449 @@
+[14:32:17] === wake watcher 启动（高频轮询 /api/log）===
+[14:34:44] ======== 新窗口 ========
+[14:34:44]    [SYS  ] wake=COLD (cause=0) sleep[14:34:49] 刚醒(up=3490ms) 但取日志失败: timed out
+[15:24:16] 刚醒(up=5321ms) 但取日志失败: timed out
+[15:53:18] 刚醒(up=4155ms) 但取日志失败: timed out
+[15:54:04] 刚醒(up=7358ms) 但取日志失败: timed out
+[15:54:31] 刚醒(up=5459ms) 但取日志失败: timed out
+[15:54:44] 刚醒(up=4281ms) 但取日志失败: timed out
+[15:56:48] 刚醒(up=3462ms) 但取日志失败: timed out
+[15:59:11] 刚醒(up=4031ms) 但取日志失败: timed out
+[16:02:24] 刚醒(up=5061ms) 但取日志失败: timed out
+[16:04:53] 刚醒(up=3356ms) 但取日志失败: timed out
+[16:05:04] 刚醒(up=4187ms) 但取日志失败: timed out
+[16:07:10] ---- 刚醒 up=5593ms ----
+[16:07:10]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[16:07:10]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:13:43] ---- 刚醒 up=4338ms ----
+[16:13:43]    [SYS  ] wake=COLD (cause=0) sleep_en=0 poll=60000ms max_awake=30000ms
+[16:13:43]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=55ms infer=64ms len=8641
+[16:13:43]    [计数] gate_run=1 hit=0 miss=1 | snap_ok=0
+[16:19:37] ---- 刚醒 up=3512ms ----
+[16:19:37]    [SYS  ] wake=COLD (cause=0) sleep_en=0 poll=60000ms max_awake=30000ms
+[16:19:37]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:25:21] ---- 刚醒 up=4369ms ----
+[16:25:21]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[16:25:21]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:26:11] ---- 刚醒 up=5164ms ----
+[16:26:11]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[16:26:11]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:27:40] 刚醒(up=3669ms) 但取日志失败: timed out
+[16:28:49] 刚醒(up=4302ms) 但取日志失败: timed out
+[16:30:36] ---- 刚醒 up=3870ms ----
+[16:30:36]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[16:30:36]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:32:11] ---- 刚醒 up=4679ms ----
+[16:32:11]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[16:32:11]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:34:56] ---- 刚醒 up=5051ms ----
+[16:34:56]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[16:34:56]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:36:28] ---- 刚醒 up=7600ms ----
+[16:36:28]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[16:36:28]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:37:46] ---- 刚醒 up=5477ms ----
+[16:37:46]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[16:37:46]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:38:10] ---- 刚醒 up=4325ms ----
+[16:38:10]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:38:10]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:38:53] ---- 刚醒 up=5614ms ----
+[16:38:53]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:38:53]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:39:15] ---- 刚醒 up=3492ms ----
+[16:39:15]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:39:15]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:40:05] ---- 刚醒 up=4469ms ----
+[16:40:05]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:05]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:40:26] ---- 刚醒 up=3579ms ----
+[16:40:26]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:26]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:40:49] ---- 刚醒 up=4624ms ----
+[16:40:49]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:49]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:41:09] ---- 刚醒 up=3619ms ----
+[16:41:09]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:09]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:41:30] ---- 刚醒 up=5945ms ----
+[16:41:30]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:30]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:41:50] ---- 刚醒 up=4158ms ----
+[16:41:50]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:50]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:42:12] ---- 刚醒 up=3662ms ----
+[16:42:12]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:12]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:42:33] ---- 刚醒 up=5621ms ----
+[16:42:33]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:33]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:42:55] ---- 刚醒 up=3426ms ----
+[16:42:55]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:55]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:43:21] ---- 刚醒 up=5084ms ----
+[16:43:21]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:21]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:43:42] ---- 刚醒 up=4215ms ----
+[16:43:42]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:42]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:44:05] ---- 刚醒 up=5026ms ----
+[16:44:05]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:05]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:44:20] ---- 刚醒 up=3589ms ----
+[16:44:20]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:20]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:44:43] ---- 刚醒 up=4698ms ----
+[16:44:43]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:43]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:45:03] ---- 刚醒 up=3810ms ----
+[16:45:03]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:03]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:45:26] ---- 刚醒 up=4804ms ----
+[16:45:26]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:26]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:45:49] ---- 刚醒 up=5008ms ----
+[16:45:49]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:49]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:46:44] ---- 刚醒 up=3574ms ----
+[16:46:44]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:46:44]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:47:07] ---- 刚醒 up=4634ms ----
+[16:47:07]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:07]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:47:55] ---- 刚醒 up=5808ms ----
+[16:47:55]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:55]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:48:17] ---- 刚醒 up=3813ms ----
+[16:48:17]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:17]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:48:41] ---- 刚醒 up=4523ms ----
+[16:48:41]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:41]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:48:58] ---- 刚醒 up=3707ms ----
+[16:48:58]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:58]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:49:53] ---- 刚醒 up=4487ms ----
+[16:49:53]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:49:53]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:51:17] ---- 刚醒 up=3618ms ----
+[16:51:17]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:51:17]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:52:01] ---- 刚醒 up=4034ms ----
+[16:52:01]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:52:01]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:52:46] 刚醒(up=3612ms) 但取日志失败: timed out
+[16:52:57] 刚醒(up=5056ms) 但取日志失败: empty
+[16:53:38] 刚醒(up=4943ms) 但取日志失败: timed out
+[16:53:49] ---- 刚醒 up=5472ms ----
+[16:53:49]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:53:49]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:54:34] ---- 刚醒 up=4995ms ----
+[16:54:34]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:54:34]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:55:22] ---- 刚醒 up=3902ms ----
+[16:55:22]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:55:22]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:56:14] ---- 刚醒 up=5195ms ----
+[16:56:14]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:56:14]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:57:04] ---- 刚醒 up=3876ms ----
+[16:57:04]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:57:04]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:57:56] ---- 刚醒 up=4385ms ----
+[16:57:56]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:57:56]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:58:42] ---- 刚醒 up=5256ms ----
+[16:58:42]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:58:42]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[16:59:27] 刚醒(up=3358ms) 但取日志失败: timed out
+[16:59:37] ---- 刚醒 up=5361ms ----
+[16:59:37]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:59:37]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:00:22] ---- 刚醒 up=4576ms ----
+[17:00:22]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:00:22]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:01:11] ---- 刚醒 up=3741ms ----
+[17:01:11]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:01:11]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:02:04] ---- 刚醒 up=4336ms ----
+[17:02:04]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:02:04]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:04:43] ---- 刚醒 up=3872ms ----
+[17:04:43]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:04:43]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:05:28] ---- 刚醒 up=4120ms ----
+[17:05:28]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:05:28]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:06:17] ---- 刚醒 up=3698ms ----
+[17:06:17]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:06:17]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:07:07] ---- 刚醒 up=4002ms ----
+[17:07:07]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:07:07]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:07:56] ---- 刚醒 up=3441ms ----
+[17:07:56]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:07:56]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:08:49] ---- 刚醒 up=4326ms ----
+[17:08:49]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:08:49]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:09:36] ---- 刚醒 up=5006ms ----
+[17:09:36]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:09:36]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:10:01] ---- 刚醒 up=4790ms ----
+[17:10:01]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:10:01]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[17:10:01]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:10:50] 刚醒(up=3410ms) 但取日志失败: timed out
+[17:11:52] ---- 刚醒 up=5443ms ----
+[17:11:52]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:11:52]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:12:42] ---- 刚醒 up=7784ms ----
+[17:12:42]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:12:42]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:13:31] ---- 刚醒 up=3311ms ----
+[17:13:31]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:13:31]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:14:27] ---- 刚醒 up=6097ms ----
+[17:14:27]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:14:27]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:15:12] ---- 刚醒 up=4563ms ----
+[17:15:12]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:15:12]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:16:01] ---- 刚醒 up=3640ms ----
+[17:16:01]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:16:01]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:17:24] ---- 刚醒 up=5089ms ----
+[17:17:24]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:17:24]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:18:03] ---- 刚醒 up=3239ms ----
+[17:18:03]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:18:03]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:18:03]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:19:32] 刚醒(up=8987ms) 但取日志失败: timed out
+[17:20:10] ---- 刚醒 up=5265ms ----
+[17:20:10]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:20:10]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:20:10]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:20:51] ---- 刚醒 up=4523ms ----
+[17:20:51]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:20:51]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:20:51]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:22:01] ---- 刚醒 up=3269ms ----
+[17:22:01]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:22:01]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:22:01]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:24:04] ---- 刚醒 up=5471ms ----
+[17:24:04]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:24:04]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:25:30] ---- 刚醒 up=3576ms ----
+[17:25:30]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:25:30]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:25:30]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:26:42] ---- 刚醒 up=4921ms ----
+[17:26:42]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:26:42]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:26:42]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:27:51] ---- 刚醒 up=3248ms ----
+[17:27:51]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:27:51]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:27:51]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:29:04] ---- 刚醒 up=4767ms ----
+[17:29:04]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:29:04]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:29:04]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:30:14] ---- 刚醒 up=3736ms ----
+[17:30:14]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:30:14]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:30:14]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:32:38] ---- 刚醒 up=4610ms ----
+[17:32:38]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:32:38]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:32:38]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:33:49] ---- 刚醒 up=3363ms ----
+[17:33:49]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:33:49]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:33:49]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:35:04] 刚醒(up=8811ms) 但取日志失败: timed out
+[17:36:09] ---- 刚醒 up=3773ms ----
+[17:36:09]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:36:09]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:36:09]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:37:21] ---- 刚醒 up=5014ms ----
+[17:37:21]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:37:21]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:37:21]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:38:55] ---- 刚醒 up=4644ms ----
+[17:38:55]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:38:55]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:38:55]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:40:07] ---- 刚醒 up=5371ms ----
+[17:40:07]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:40:07]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:40:07]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:41:19] ---- 刚醒 up=3722ms ----
+[17:41:19]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:41:19]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:41:19]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:42:36] 刚醒(up=8865ms) 但取日志失败: timed out
+[17:43:42] ---- 刚醒 up=3593ms ----
+[17:43:42]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:43:42]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:43:42]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:45:26] ---- 刚醒 up=4899ms ----
+[17:45:26]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:45:26]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:45:26]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:46:36] ---- 刚醒 up=3458ms ----
+[17:46:36]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:46:36]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:46:36]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:49:01] ---- 刚醒 up=4516ms ----
+[17:49:01]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:49:01]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:49:01]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:50:11] ---- 刚醒 up=3479ms ----
+[17:50:11]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:50:11]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:50:11]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:53:01] ---- 刚醒 up=4528ms ----
+[17:53:01]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:53:01]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:53:01]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:54:11] ---- 刚醒 up=3700ms ----
+[17:54:11]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:54:11]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:54:11]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:55:22] ---- 刚醒 up=4436ms ----
+[17:55:22]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:55:22]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:55:23]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:56:33] ---- 刚醒 up=3250ms ----
+[17:56:33]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:56:33]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:56:33]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[17:57:26] ---- 刚醒 up=4846ms ----
+[17:57:26]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:57:26]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:00:08] 刚醒(up=3264ms) 但取日志失败: timed out
+[18:03:32] 刚醒(up=4452ms) 但取日志失败: timed out
+[18:04:38] 刚醒(up=3303ms) 但取日志失败: timed out
+[18:08:04] ---- 刚醒 up=4844ms ----
+[18:08:04]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:08:04]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:08:04]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:09:16] 刚醒(up=3954ms) 但取日志失败: timed out
+[18:10:24] 刚醒(up=4431ms) 但取日志失败: timed out
+[18:13:48] 刚醒(up=3552ms) 但取日志失败: timed out
+[18:14:56] 刚醒(up=4412ms) 但取日志失败: timed out
+[18:15:45] ---- 刚醒 up=3870ms ----
+[18:15:45]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:15:45]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:17:21] 刚醒(up=8674ms) 但取日志失败: timed out
+[18:18:29] 刚醒(up=3571ms) 但取日志失败: empty
+[18:19:46] 刚醒(up=8800ms) 但取日志失败: timed out
+[18:20:53] 刚醒(up=3607ms) 但取日志失败: timed out
+[18:22:01] 刚醒(up=4145ms) 但取日志失败: timed out
+[18:24:22] ---- 刚醒 up=3618ms ----
+[18:24:22]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:24:22]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:24:22]    [PIPE ] 人形确认 src=pir phase=primary faces=1 score=100 (decode=57ms infer=74ms)
+[18:24:22]    [计数] gate_run=1 hit=1 miss=0 | snap_ok=1
+[18:25:12] 刚醒(up=4242ms) 但取日志失败: timed out
+[18:25:23] 刚醒(up=6340ms) 但取日志失败: timed out
+[18:25:41] 刚醒(up=5029ms) 但取日志失败: timed out
+[18:26:22] 刚醒(up=3807ms) 但取日志失败: timed out
+[18:30:58] ---- 刚醒 up=8608ms ----
+[18:30:58]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:31:26] ---- 刚醒 up=5388ms ----
+[18:31:26]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:31:54] 刚醒(up=3587ms) 但取日志失败: timed out
+[18:32:26] 刚醒(up=5208ms) 但取日志失败: timed out
+[18:33:11] ---- 刚醒 up=4374ms ----
+[18:33:11]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:35:55] ---- 刚醒 up=3928ms ----
+[18:35:55]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:35:55]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:37:26] 刚醒(up=4327ms) 但取日志失败: timed out
+[18:38:33] 刚醒(up=3331ms) 但取日志失败: timed out
+[18:38:55] ---- 刚醒 up=4759ms ----
+[18:38:55]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:38:55]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:39:53] ---- 刚醒 up=3811ms ----
+[18:39:53]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:39:53]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:44:14] ---- 刚醒 up=4238ms ----
+[18:44:14]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:44:14]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:45:33] ---- 刚醒 up=5045ms ----
+[18:45:33]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:45:33]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:47:02] 刚醒(up=3963ms) 但取日志失败: timed out
+[18:47:46] ---- 刚醒 up=4807ms ----
+[18:47:46]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:47:46]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[18:48:05] ---- 刚醒 up=5136ms ----
+[18:48:05]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:48:05]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:11:11] ---- 刚醒 up=4458ms ----
+[19:11:11]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:11:11]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:18:21] ---- 刚醒 up=5482ms ----
+[19:18:21]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:18:21]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:18:45] ---- 刚醒 up=3954ms ----
+[19:18:45]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:18:45]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:19:27] 刚醒(up=8899ms) 但取日志失败: timed out
+[19:20:18] ---- 刚醒 up=3475ms ----
+[19:20:18]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:20:18]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:37:46] ---- 刚醒 up=8876ms ----
+[19:37:46]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:37:46]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:38:59] ---- 刚醒 up=3261ms ----
+[19:38:59]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:38:59]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:40:37] ---- 刚醒 up=4266ms ----
+[19:40:37]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:40:37]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:42:02] ---- 刚醒 up=3557ms ----
+[19:42:02]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:42:02]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:44:09] 刚醒(up=4160ms) 但取日志失败: empty
+[19:44:35] ---- 刚醒 up=3923ms ----
+[19:44:35]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:44:35]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:45:52] ---- 刚醒 up=4388ms ----
+[19:45:52]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:45:52]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:46:35] ---- 刚醒 up=3620ms ----
+[19:46:35]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:46:35]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:51:51] ---- 刚醒 up=4848ms ----
+[19:51:51]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:51:51]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[19:54:28] 刚醒(up=3337ms) 但取日志失败: timed out
+[19:55:36] 刚醒(up=4490ms) 但取日志失败: timed out
+[20:05:52] ---- 刚醒 up=3532ms ----
+[20:05:52]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:05:52]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:06:37] ---- 刚醒 up=4382ms ----
+[20:06:37]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:06:37]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:07:01] 刚醒(up=3738ms) 但取日志失败: timed out
+[20:08:24] ---- 刚醒 up=8544ms ----
+[20:08:24]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:08:24]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:09:56] ---- 刚醒 up=4273ms ----
+[20:09:56]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:09:56]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:11:08] ---- 刚醒 up=3430ms ----
+[20:11:08]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:11:44] ---- 刚醒 up=8327ms ----
+[20:11:44]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:12:12] ---- 刚醒 up=4773ms ----
+[20:12:12]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:12:58] ---- 刚醒 up=3653ms ----
+[20:12:58]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:13:34] ---- 刚醒 up=8795ms ----
+[20:13:34]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:13:57] ---- 刚醒 up=3627ms ----
+[20:13:57]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:15:04] ---- 刚醒 up=8998ms ----
+[20:15:05]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:15:05]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:15:05]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:16:31] 刚醒(up=4285ms) 但取日志失败: timed out
+[20:17:37] 刚醒(up=3452ms) 但取日志失败: timed out
+[20:19:42] ---- 刚醒 up=4790ms ----
+[20:19:42]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:19:42]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:19:42]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:21:11] 刚醒(up=3903ms) 但取日志失败: timed out
+[20:22:19] 刚醒(up=4773ms) 但取日志失败: timed out
+[20:24:33] 刚醒(up=3615ms) 但取日志失败: timed out
+[20:25:41] ---- 刚醒 up=5063ms ----
+[20:25:41]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:25:41]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:25:41]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:26:56] ---- 刚醒 up=3953ms ----
+[20:26:56]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:26:56]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:28:30] 刚醒(up=4909ms) 但取日志失败: timed out
+[20:28:57] ---- 刚醒 up=5090ms ----
+[20:28:57]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:28:57]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:28:57]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:31:09] ---- 刚醒 up=4352ms ----
+[20:31:09]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:31:09]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:31:46] ---- 刚醒 up=3767ms ----
+[20:31:46]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:31:46]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:31:46]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:33:32] 刚醒(up=4171ms) 但取日志失败: timed out
+[20:34:39] ---- 刚醒 up=3290ms ----
+[20:34:39]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:34:39]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:37:07] ---- 刚醒 up=4225ms ----
+[20:37:07]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:37:07]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:37:07]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:37:53] ---- 刚醒 up=3351ms ----
+[20:37:53]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:37:53]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:37:53]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:39:25] ---- 刚醒 up=4567ms ----
+[20:39:25]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:39:25]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:41:54] ---- 刚醒 up=3667ms ----
+[20:41:54]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:41:54]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:42:06] ---- 刚醒 up=5498ms ----
+[20:42:06]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:42:06]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:43:35] 刚醒(up=3801ms) 但取日志失败: timed out
+[20:44:46] ---- 刚醒 up=4498ms ----
+[20:44:46]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:44:46]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:46:16] 刚醒(up=3499ms) 但取日志失败: timed out
+[20:49:14] ---- 刚醒 up=5801ms ----
+[20:49:14]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:49:14]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:50:33] 刚醒(up=3544ms) 但取日志失败: timed out
+[20:53:44] ---- 刚醒 up=4185ms ----
+[20:53:44]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:53:44]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:55:21] ---- 刚醒 up=5197ms ----
+[20:55:21]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:55:21]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[20:58:20] 刚醒(up=4248ms) 但取日志失败: timed out
+[21:04:17] ---- 刚醒 up=5162ms ----
+[21:04:17]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[21:04:17]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[21:04:17]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+[21:06:24] ---- 刚醒 up=4975ms ----
+[21:06:24]    [计数] gate_run=0 hit=0 miss=0 | snap_ok=0
+口 ========
+[16:38:36]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:38:36]    [TG   ] sendPhoto chat=7960301969 len=7997 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:38:36]    [TG   ] sendPhoto ok retry=0
+[16:38:36]    [Q    ] upload ok id=1 ok=1 fail=0
+[16:38:45] ======== 新窗口 ========
+[16:38:45]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:38:45]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:38:52] ======== 新窗口 ========
+[16:38:52]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:38:55] ======== 新窗口 ========
+[16:38:55]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:38:55]    [TG   ] sendPhoto chat=7960301969 len=7981 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:39:05] ======== 新窗口 ========
+[16:39:05]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:39:05]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:39:13] ======== 新窗口 ========
+[16:39:13]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:39:19] ======== 新窗口 ========
+[16:39:19]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:39:19]    [TG   ] sendPhoto chat=7960301969 len=8024 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:39:29] ======== 新窗口 ========
+[16:39:29]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:39:29]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:39:38] ======== 新窗口 ========
+[16:39:38]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:39:41] ======== 新窗口 ========
+[16:39:41]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:39:41]    [TG   ] sendPhoto chat=7960301969 len=8014 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:39:51] ======== 新窗口 ========
+[16:39:51]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:39:51]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:39:59] ======== 新窗口 ========
+[16:39:59]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:02] ======== 新窗口 ========
+[16:40:02]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:02]    [TG   ] sendPhoto chat=7960301969 len=8023 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:40:20] ======== 新窗口 ========
+[16:40:20]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:23] ======== 新窗口 ========
+[16:40:23]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:23]    [TG   ] sendPhoto chat=7960301969 len=7978 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:40:26] ======== 新窗口 ========
+[16:40:26]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:26]    [TG   ] sendPhoto chat=7960301969 len=7978 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:40:26]    [TG   ] sendPhoto ok retry=0
+[16:40:26]    [Q    ] upload ok id=1 ok=1 fail=0
+[16:40:35] ======== 新窗口 ========
+[16:40:35]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:35]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:40:41] ======== 新窗口 ========
+[16:40:42]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:46] ======== 新窗口 ========
+[16:40:46]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:46]    [TG   ] sendPhoto chat=7960301969 len=7994 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:40:56] ======== 新窗口 ========
+[16:40:56]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:40:56]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:41:05] ======== 新窗口 ========
+[16:41:05]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:08] ======== 新窗口 ========
+[16:41:08]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:08]    [TG   ] sendPhoto chat=7960301969 len=8018 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-31 8KB sd" token=880029***
+[16:41:20] ======== 新窗口 ========
+[16:41:20]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:20]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:41:27] ======== 新窗口 ========
+[16:41:27]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:30] ======== 新窗口 ========
+[16:41:30]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:30]    [TG   ] sendPhoto chat=7960301969 len=8022 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:41:42] ======== 新窗口 ========
+[16:41:42]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:42]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:41:48] ======== 新窗口 ========
+[16:41:48]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:53] ======== 新窗口 ========
+[16:41:53]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:41:53]    [TG   ] sendPhoto chat=7960301969 len=7953 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:42:02] ======== 新窗口 ========
+[16:42:02]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:02]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:42:09] ======== 新窗口 ========
+[16:42:09]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:16] ======== 新窗口 ========
+[16:42:16]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:16]    [TG   ] sendPhoto chat=7960301969 len=7957 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:42:25] ======== 新窗口 ========
+[16:42:25]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:25]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:42:32] ======== 新窗口 ========
+[16:42:32]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:35] ======== 新窗口 ========
+[16:42:35]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:35]    [TG   ] sendPhoto chat=7960301969 len=7938 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:42:47] ======== 新窗口 ========
+[16:42:47]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:47]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:42:53] ======== 新窗口 ========
+[16:42:53]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:56] ======== 新窗口 ========
+[16:42:56]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:42:56]    [TG   ] sendPhoto chat=7960301969 len=7975 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:43:07] ======== 新窗口 ========
+[16:43:07]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:07]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:43:14] ======== 新窗口 ========
+[16:43:14]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:28] ======== 新窗口 ========
+[16:43:28]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:28]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:43:36] ======== 新窗口 ========
+[16:43:36]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:39] ======== 新窗口 ========
+[16:43:39]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:39]    [TG   ] sendPhoto chat=7960301969 len=7940 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:43:42] ======== 新窗口 ========
+[16:43:42]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:42]    [TG   ] sendPhoto chat=7960301969 len=7940 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:43:42]    [TG   ] sendPhoto ok retry=0
+[16:43:42]    [Q    ] upload ok id=1 ok=1 fail=0
+[16:43:51] ======== 新窗口 ========
+[16:43:51]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:43:51]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:43:57] ======== 新窗口 ========
+[16:43:57]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:00] ======== 新窗口 ========
+[16:44:00]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:00]    [TG   ] sendPhoto chat=7960301969 len=7944 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:44:13] ======== 新窗口 ========
+[16:44:13]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:13]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:44:20] ======== 新窗口 ========
+[16:44:20]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:23] ======== 新窗口 ========
+[16:44:23]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:23]    [TG   ] sendPhoto chat=7960301969 len=7940 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:44:33] ======== 新窗口 ========
+[16:44:33]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:33]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:44:40] ======== 新窗口 ========
+[16:44:40]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:43] ======== 新窗口 ========
+[16:44:43]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:43]    [TG   ] sendPhoto chat=7960301969 len=7946 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:44:54] ======== 新窗口 ========
+[16:44:54]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:44:54]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:45:02] ======== 新窗口 ========
+[16:45:02]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:05] ======== 新窗口 ========
+[16:45:05]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:05]    [TG   ] sendPhoto chat=7960301969 len=7952 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:45:16] ======== 新窗口 ========
+[16:45:16]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:16]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:45:23] ======== 新窗口 ========
+[16:45:23]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:29] ======== 新窗口 ========
+[16:45:29]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:29]    [TG   ] sendPhoto chat=7960301969 len=7954 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[16:45:39] ======== 新窗口 ========
+[16:45:39]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:39]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:45:48] ======== 新窗口 ========
+[16:45:48]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:51] ======== 新窗口 ========
+[16:45:51]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:51]    [TG   ] sendPhoto chat=7960301969 len=7951 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:45:54] ======== 新窗口 ========
+[16:45:54]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:45:54]    [TG   ] sendPhoto chat=7960301969 len=7951 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:45:54]    [TG   ] sendPhoto ok retry=0
+[16:45:54]    [Q    ] upload ok id=1 ok=1 fail=0
+[16:46:39] ======== 新窗口 ========
+[16:46:39]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:46:42] ======== 新窗口 ========
+[16:46:42]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:46:42]    [TG   ] sendPhoto chat=7960301969 len=7983 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-31 8KB sd" token=880029***
+[16:46:53] ======== 新窗口 ========
+[16:46:53]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:46:53]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:47:00] ======== 新窗口 ========
+[16:47:00]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:06] ======== 新窗口 ========
+[16:47:06]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:06]    [TG   ] sendPhoto chat=7960301969 len=7973 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:47:06]    [TG   ] sendPhoto ok retry=0
+[16:47:06]    [Q    ] upload ok id=1 ok=1 fail=0
+[16:47:15] ======== 新窗口 ========
+[16:47:15]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:15]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:47:22] ======== 新窗口 ========
+[16:47:22]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:30] ======== 新窗口 ========
+[16:47:30]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:30]    [TG   ] sendPhoto chat=7960301969 len=7921 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:47:39] ======== 新窗口 ========
+[16:47:39]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:39]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:47:49] ======== 新窗口 ========
+[16:47:49]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:55] ======== 新窗口 ========
+[16:47:55]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:47:55]    [TG   ] sendPhoto chat=7960301969 len=7921 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:48:04] ======== 新窗口 ========
+[16:48:04]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:04]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:48:11] ======== 新窗口 ========
+[16:48:11]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:15] ======== 新窗口 ========
+[16:48:15]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:15]    [TG   ] sendPhoto chat=7960301969 len=7996 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:48:26] ======== 新窗口 ========
+[16:48:26]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:26]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:48:35] ======== 新窗口 ========
+[16:48:35]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:39] ======== 新窗口 ========
+[16:48:39]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:39]    [TG   ] sendPhoto chat=7960301969 len=7885 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-31 8KB sd" token=880029***
+[16:48:49] ======== 新窗口 ========
+[16:48:49]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:48:49]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:48:56] ======== 新窗口 ========
+[16:48:56]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:49:02] ======== 新窗口 ========
+[16:49:02]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=3000ms max_awake=30000ms
+[16:49:02]    [TG   ] sendPhoto chat=7960301969 len=7976 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:49:39] ======== 新窗口 ========
+[16:49:39]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:49:39]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:49:45] ======== 新窗口 ========
+[16:49:45]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:49:51] ======== 新窗口 ========
+[16:49:51]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:49:51]    [TG   ] sendPhoto chat=7960301969 len=7973 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:49:51]    [TG   ] sendPhoto ok retry=0
+[16:49:51]    [Q    ] upload ok id=1 ok=1 fail=0
+[16:51:11] ======== 新窗口 ========
+[16:51:11]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:51:17] ======== 新窗口 ========
+[16:51:17]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:51:17]    [TG   ] sendPhoto chat=7960301969 len=7980 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[16:51:53] ======== 新窗口 ========
+[16:51:53]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:51:53]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:52:00] ======== 新窗口 ========
+[16:52:00]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:52:03] ======== 新窗口 ========
+[16:52:03]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:52:03]    [TG   ] sendPhoto chat=7960301969 len=7989 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[16:52:40] ======== 新窗口 ========
+[16:52:40]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:52:40]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:52:50] ======== 新窗口 ========
+[16:52:50]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:52:53] ======== 新窗口 ========
+[16:52:53]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:52:53]    [TG   ] sendPhoto chat=7960301969 len=7997 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:53:33] ======== 新窗口 ========
+[16:53:33]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:53:33]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:53:43] ======== 新窗口 ========
+[16:53:43]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:53:46] ======== 新窗口 ========
+[16:53:46]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:53:46]    [TG   ] sendPhoto chat=7960301969 len=7969 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[16:54:24] ======== 新窗口 ========
+[16:54:24]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:54:24]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:54:31] ======== 新窗口 ========
+[16:54:31]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:54:34] ======== 新窗口 ========
+[16:54:34]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:54:34]    [TG   ] sendPhoto chat=7960301969 len=7964 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:54:37] ======== 新窗口 ========
+[16:54:37]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:54:37]    [TG   ] sendPhoto chat=7960301969 len=7964 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:54:37]    [TG   ] sendPhoto ok retry=0
+[16:54:37]    [Q    ] upload ok id=1 ok=1 fail=0
+[16:55:14] ======== 新窗口 ========
+[16:55:14]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:55:14]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:55:20] ======== 新窗口 ========
+[16:55:20]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:55:27] ======== 新窗口 ========
+[16:55:27]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:55:27]    [TG   ] sendPhoto chat=7960301969 len=7966 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:56:03] ======== 新窗口 ========
+[16:56:03]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:56:03]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:56:10] ======== 新窗口 ========
+[16:56:10]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:56:17] ======== 新窗口 ========
+[16:56:17]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:56:17]    [TG   ] sendPhoto chat=7960301969 len=7985 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 8KB sd" token=880029***
+[16:56:53] ======== 新窗口 ========
+[16:56:53]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:56:53]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:57:00] ======== 新窗口 ========
+[16:57:00]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:57:07] ======== 新窗口 ========
+[16:57:07]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:57:07]    [TG   ] sendPhoto chat=7960301969 len=7968 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[16:57:43] ======== 新窗口 ========
+[16:57:43]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:57:43]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:57:50] ======== 新窗口 ========
+[16:57:50]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:57:56] ======== 新窗口 ========
+[16:57:56]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:57:56]    [TG   ] sendPhoto chat=7960301969 len=7912 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[16:58:33] ======== 新窗口 ========
+[16:58:33]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:58:33]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:58:40] ======== 新窗口 ========
+[16:58:40]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:58:43] ======== 新窗口 ========
+[16:58:43]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:58:43]    [TG   ] sendPhoto chat=7960301969 len=7903 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[16:58:46] ======== 新窗口 ========
+[16:58:46]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:58:46]    [TG   ] sendPhoto chat=7960301969 len=7903 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[16:58:46]    [TG   ] sendPhoto ok retry=0
+[16:58:46]    [Q    ] upload ok id=1 ok=1 fail=0
+[16:59:21] ======== 新窗口 ========
+[16:59:21]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:59:21]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[16:59:30] ======== 新窗口 ========
+[16:59:30]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:59:36] ======== 新窗口 ========
+[16:59:36]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[16:59:36]    [TG   ] sendPhoto chat=7960301969 len=7908 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[17:00:13] ======== 新窗口 ========
+[17:00:13]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:00:13]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:00:20] ======== 新窗口 ========
+[17:00:20]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:00:24] ======== 新窗口 ========
+[17:00:24]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:00:24]    [TG   ] sendPhoto chat=7960301969 len=7888 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[17:01:00] ======== 新窗口 ========
+[17:01:00]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:01:00]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:01:08] ======== 新窗口 ========
+[17:01:08]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:01:14] ======== 新窗口 ========
+[17:01:14]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:01:14]    [TG   ] sendPhoto chat=7960301969 len=7924 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 8KB sd" token=880029***
+[17:01:50] ======== 新窗口 ========
+[17:01:50]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:01:50]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:01:57] ======== 新窗口 ========
+[17:01:57]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:02:01] ======== 新窗口 ========
+[17:02:01]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:02:01]    [TG   ] sendPhoto chat=7960301969 len=7936 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[17:02:04] ======== 新窗口 ========
+[17:02:04]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:02:04]    [TG   ] sendPhoto chat=7960301969 len=7936 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[17:02:04]    [TG   ] sendPhoto ok retry=0
+[17:02:04]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:02:38] ======== 新窗口 ========
+[17:02:38]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:02:38]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:02:47] ======== 新窗口 ========
+[17:02:47]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:02:51] ======== 新窗口 ========
+[17:02:51]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:02:51]    [TG   ] sendPhoto chat=7960301969 len=7923 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-28 8KB sd" token=880029***
+[17:04:37] ======== 新窗口 ========
+[17:04:37]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:04:40] ======== 新窗口 ========
+[17:04:40]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:04:40]    [TG   ] sendPhoto chat=7960301969 len=7445 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 7KB sd" token=880029***
+[17:05:19] ======== 新窗口 ========
+[17:05:19]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:05:19]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:05:26] ======== 新窗口 ========
+[17:05:26]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:05:32] ======== 新窗口 ========
+[17:05:32]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:05:32]    [TG   ] sendPhoto chat=7960301969 len=7463 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 7KB sd" token=880029***
+[17:06:08] ======== 新窗口 ========
+[17:06:08]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:06:08]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:06:15] ======== 新窗口 ========
+[17:06:15]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:06:18] ======== 新窗口 ========
+[17:06:18]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:06:18]    [TG   ] sendPhoto chat=7960301969 len=7462 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 7KB sd" token=880029***
+[17:06:58] ======== 新窗口 ========
+[17:06:58]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:06:58]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:07:04] ======== 新窗口 ========
+[17:07:04]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:07:11] ======== 新窗口 ========
+[17:07:11]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:07:11]    [TG   ] sendPhoto chat=7960301969 len=7479 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-30 7KB sd" token=880029***
+[17:07:48] ======== 新窗口 ========
+[17:07:48]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:07:48]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:07:54] ======== 新窗口 ========
+[17:07:54]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:07:57] ======== 新窗口 ========
+[17:07:57]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:07:57]    [TG   ] sendPhoto chat=7960301969 len=7475 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 7KB sd" token=880029***
+[17:08:00] ======== 新窗口 ========
+[17:08:00]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:08:00]    [TG   ] sendPhoto chat=7960301969 len=7475 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 7KB sd" token=880029***
+[17:08:00]    [TG   ] sendPhoto ok retry=0
+[17:08:00]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:08:35] ======== 新窗口 ========
+[17:08:35]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:08:35]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:08:44] ======== 新窗口 ========
+[17:08:44]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:08:47] ======== 新窗口 ========
+[17:08:47]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:08:47]    [TG   ] sendPhoto chat=7960301969 len=7489 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-29 7KB sd" token=880029***
+[17:09:23] ======== 新窗口 ========
+[17:09:23]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:09:23]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:09:31] ======== 新窗口 ========
+[17:09:31]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:09:54] ======== 新窗口 ========
+[17:09:54]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:09:54]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[17:10:16] ======== 新窗口 ========
+[17:10:16]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:10:16]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[17:10:16]    [TG   ] sendPhoto chat=7960301969 len=31636 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-42 31KB s" token=880029***
+[17:10:19] ======== 新窗口 ========
+[17:10:19]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[17:10:19]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[17:10:19]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=57ms infer=63ms len=54101
+[17:10:19]    [TG   ] sendPhoto chat=7960301969 len=31636 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-42 31KB s" token=880029***
+[17:10:19]    [TG   ] sendPhoto ok retry=0
+[17:10:19]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:10:44] ======== 新窗口 ========
+[17:10:44]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:10:44]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[17:10:44]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=57ms infer=64ms len=20533
+[17:11:31] ======== 新窗口 ========
+[17:11:31]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:11:31]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:11:40] ======== 新窗口 ========
+[17:11:40]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:11:50] ======== 新窗口 ========
+[17:11:50]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:11:50]    [TG   ] sendPhoto chat=7960301969 len=8661 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-42 8KB sd" token=880029***
+[17:12:33] ======== 新窗口 ========
+[17:12:33]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:12:33]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:12:41] ======== 新窗口 ========
+[17:12:41]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:12:47] ======== 新窗口 ========
+[17:12:47]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:12:47]    [TG   ] sendPhoto chat=7960301969 len=8510 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-36 8KB sd" token=880029***
+[17:13:22] ======== 新窗口 ========
+[17:13:22]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:13:22]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:13:30] ======== 新窗口 ========
+[17:13:30]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:13:33] ======== 新窗口 ========
+[17:13:33]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:13:33]    [TG   ] sendPhoto chat=7960301969 len=7731 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:14:10] ======== 新窗口 ========
+[17:14:10]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:14:10]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:14:20] ======== 新窗口 ========
+[17:14:20]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:14:26] ======== 新窗口 ========
+[17:14:26]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:14:26]    [TG   ] sendPhoto chat=7960301969 len=8565 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:15:03] ======== 新窗口 ========
+[17:15:03]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:15:03]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:15:10] ======== 新窗口 ========
+[17:15:10]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:15:13] ======== 新窗口 ========
+[17:15:13]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:15:13]    [TG   ] sendPhoto chat=7960301969 len=8651 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:15:53] ======== 新窗口 ========
+[17:15:53]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:15:53]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:15:59] ======== 新窗口 ========
+[17:15:59]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:16:02] ======== 新窗口 ========
+[17:16:02]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:16:02]    [TG   ] sendPhoto chat=7960301969 len=8638 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:16:06] ======== 新窗口 ========
+[17:16:06]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:16:06]    [TG   ] sendPhoto chat=7960301969 len=8638 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:16:06]    [TG   ] sendPhoto ok retry=0
+[17:16:06]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:17:16] ======== 新窗口 ========
+[17:17:16]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:17:22] ======== 新窗口 ========
+[17:17:22]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:17:22]    [TG   ] sendPhoto chat=7960301969 len=8652 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:17:58] ======== 新窗口 ========
+[17:17:58]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:17:58]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:18:02] ======== 新窗口 ========
+[17:18:02]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:18:02]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:18:02]    [TG   ] sendPhoto chat=7960301969 len=8647 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:18:39] ======== 新窗口 ========
+[17:18:39]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:18:39]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:18:42] ======== 新窗口 ========
+[17:18:42]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:18:42]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:18:42]    [TG   ] sendPhoto chat=7960301969 len=8640 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:18:45] ======== 新窗口 ========
+[17:18:45]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:18:45]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:18:45]    [TG   ] sendPhoto chat=7960301969 len=8640 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:18:45]    [TG   ] sendPhoto ok retry=0
+[17:18:45]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:19:22] ======== 新窗口 ========
+[17:19:22]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:19:22]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:19:25] ======== 新窗口 ========
+[17:19:25]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:19:25]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:19:25]    [TG   ] sendPhoto chat=7960301969 len=8639 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-35 8KB sd" token=880029***
+[17:20:02] ======== 新窗口 ========
+[17:20:02]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:20:02]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:20:05] ======== 新窗口 ========
+[17:20:05]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:20:05]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:20:05]    [TG   ] sendPhoto chat=7960301969 len=8652 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:20:44] ======== 新窗口 ========
+[17:20:44]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=30000ms max_awake=30000ms
+[17:20:44]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:21:55] ======== 新窗口 ========
+[17:21:55]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:21:55]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:22:01] ======== 新窗口 ========
+[17:22:01]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:22:01]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:22:01]    [TG   ] sendPhoto chat=7960301969 len=8516 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:22:01]    [TG   ] sendPhoto ok retry=0
+[17:23:08] ======== 新窗口 ========
+[17:23:08]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:23:12] ======== 新窗口 ========
+[17:23:12]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:23:12]    [TG   ] sendPhoto chat=7960301969 len=8637 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:23:57] ======== 新窗口 ========
+[17:23:57]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:24:00] ======== 新窗口 ========
+[17:24:00]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:24:00]    [TG   ] sendPhoto chat=7960301969 len=8678 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:25:25] ======== 新窗口 ========
+[17:25:25]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:25:25]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:25:28] ======== 新窗口 ========
+[17:25:28]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:25:28]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:25:28]    [TG   ] sendPhoto chat=7960301969 len=8631 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:26:34] ======== 新窗口 ========
+[17:26:34]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:26:34]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:26:38] ======== 新窗口 ========
+[17:26:38]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:26:38]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:26:38]    [TG   ] sendPhoto chat=7960301969 len=8621 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:27:45] ======== 新窗口 ========
+[17:27:45]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:27:45]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:27:51] ======== 新窗口 ========
+[17:27:51]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:27:51]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:27:51]    [TG   ] sendPhoto chat=7960301969 len=8608 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:28:58] ======== 新窗口 ========
+[17:28:58]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:28:58]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:29:01] ======== 新窗口 ========
+[17:29:01]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:29:01]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:29:01]    [TG   ] sendPhoto chat=7960301969 len=8606 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:30:08] ======== 新窗口 ========
+[17:30:08]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:30:08]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:30:15] ======== 新窗口 ========
+[17:30:15]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:30:15]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:30:15]    [TG   ] sendPhoto chat=7960301969 len=8581 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:30:15]    [TG   ] sendPhoto ok retry=0
+[17:30:15]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:31:20] ======== 新窗口 ========
+[17:31:20]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:31:20]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:31:26] ======== 新窗口 ========
+[17:31:26]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:31:26]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:31:26]    [TG   ] sendPhoto chat=7960301969 len=8584 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:31:26]    [TG   ] sendPhoto ok retry=0
+[17:31:26]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:32:31] ======== 新窗口 ========
+[17:32:31]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:32:31]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:32:37] ======== 新窗口 ========
+[17:32:37]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:32:37]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:32:37]    [TG   ] sendPhoto chat=7960301969 len=8626 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-33 8KB sd" token=880029***
+[17:33:41] ======== 新窗口 ========
+[17:33:41]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:33:41]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:33:47] ======== 新窗口 ========
+[17:33:47]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:33:47]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:33:47]    [TG   ] sendPhoto chat=7960301969 len=8627 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:34:52] ======== 新窗口 ========
+[17:34:52]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:34:52]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:34:59] ======== 新窗口 ========
+[17:34:59]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:34:59]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:34:59]    [TG   ] sendPhoto chat=7960301969 len=8658 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:34:59]    [TG   ] sendPhoto ok retry=0
+[17:34:59]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:36:03] ======== 新窗口 ========
+[17:36:03]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:36:03]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:36:06] ======== 新窗口 ========
+[17:36:06]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:36:06]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:36:06]    [TG   ] sendPhoto chat=7960301969 len=8557 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:37:14] ======== 新窗口 ========
+[17:37:14]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:37:14]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:37:17] ======== 新窗口 ========
+[17:37:17]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:37:17]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:37:17]    [TG   ] sendPhoto chat=7960301969 len=8535 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:38:48] ======== 新窗口 ========
+[17:38:48]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:38:48]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:38:51] ======== 新窗口 ========
+[17:38:51]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:38:51]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:38:51]    [TG   ] sendPhoto chat=7960301969 len=8485 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:38:54] ======== 新窗口 ========
+[17:38:54]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:38:54]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:38:54]    [TG   ] sendPhoto chat=7960301969 len=8485 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:38:54]    [TG   ] sendPhoto ok retry=0
+[17:38:54]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:39:59] ======== 新窗口 ========
+[17:39:59]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:39:59]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:40:06] ======== 新窗口 ========
+[17:40:06]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:40:06]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:40:06]    [TG   ] sendPhoto chat=7960301969 len=8544 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:41:13] ======== 新窗口 ========
+[17:41:13]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:41:13]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:41:16] ======== 新窗口 ========
+[17:41:16]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:41:16]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:41:16]    [TG   ] sendPhoto chat=7960301969 len=8528 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:42:26] ======== 新窗口 ========
+[17:42:26]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:42:26]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:42:29] ======== 新窗口 ========
+[17:42:29]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:42:29]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:42:29]    [TG   ] sendPhoto chat=7960301969 len=8583 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:43:36] ======== 新窗口 ========
+[17:43:36]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:43:36]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:43:39] ======== 新窗口 ========
+[17:43:39]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:43:39]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:43:39]    [TG   ] sendPhoto chat=7960301969 len=8576 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:45:19] ======== 新窗口 ========
+[17:45:19]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:45:19]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:45:26] ======== 新窗口 ========
+[17:45:26]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:45:26]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:45:26]    [TG   ] sendPhoto chat=7960301969 len=8554 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:45:26]    [TG   ] sendPhoto ok retry=0
+[17:45:26]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:46:30] ======== 新窗口 ========
+[17:46:30]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:46:30]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:46:36] ======== 新窗口 ========
+[17:46:36]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:46:36]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:46:36]    [TG   ] sendPhoto chat=7960301969 len=8549 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:47:43] ======== 新窗口 ========
+[17:47:43]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:47:43]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:47:46] ======== 新窗口 ========
+[17:47:46]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:47:46]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:47:46]    [TG   ] sendPhoto chat=7960301969 len=8565 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:48:54] ======== 新窗口 ========
+[17:48:54]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:48:54]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:48:57] ======== 新窗口 ========
+[17:48:57]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:48:57]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:48:57]    [TG   ] sendPhoto chat=7960301969 len=8556 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:50:04] ======== 新窗口 ========
+[17:50:04]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:50:04]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:50:07] ======== 新窗口 ========
+[17:50:07]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:50:07]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:50:07]    [TG   ] sendPhoto chat=7960301969 len=8632 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-34 8KB sd" token=880029***
+[17:51:44] ======== 新窗口 ========
+[17:51:44]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:51:47] ======== 新窗口 ========
+[17:51:47]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:51:47]    [TG   ] sendPhoto chat=7960301969 len=8492 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-35 8KB sd" token=880029***
+[17:52:54] ======== 新窗口 ========
+[17:52:54]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:52:54]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:54:11] ======== 新窗口 ========
+[17:54:11]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:54:11]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:54:11]    [TG   ] sendPhoto chat=7960301969 len=8491 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-36 8KB sd" token=880029***
+[17:54:11]    [TG   ] sendPhoto ok retry=0
+[17:54:11]    [Q    ] upload ok id=1 ok=1 fail=0
+[17:55:16] ======== 新窗口 ========
+[17:55:16]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:55:16]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:55:19] ======== 新窗口 ========
+[17:55:19]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:55:19]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:55:19]    [TG   ] sendPhoto chat=7960301969 len=8561 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-36 8KB sd" token=880029***
+[17:56:26] ======== 新窗口 ========
+[17:56:26]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:56:26]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:56:33] ======== 新窗口 ========
+[17:56:33]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[17:56:33]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[17:56:33]    [TG   ] sendPhoto chat=7960301969 len=8486 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-35 8KB sd" token=880029***
+[17:57:18] ======== 新窗口 ========
+[17:57:18]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:00:02] ======== 新窗口 ========
+[18:00:02]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:00:02]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:15:39] ======== 新窗口 ========
+[18:15:39]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:17:10] ======== 新窗口 ========
+[18:17:10]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:17:10]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:19:39] ======== 新窗口 ========
+[18:19:39]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:19:39]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:19:39]    [TG   ] sendPhoto chat=7960301969 len=8525 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-36 8KB sd" token=880029***
+[18:19:42] ======== 新窗口 ========
+[18:19:42]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:19:42]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:19:42]    [TG   ] sendPhoto chat=7960301969 len=8525 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=telegram rssi=-36 8KB sd" token=880029***
+[18:19:42]    [TG   ] sendPhoto ok retry=0
+[18:19:42]    [Q    ] upload ok id=1 ok=1 fail=0
+[18:20:46] ======== 新窗口 ========
+[18:20:46]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:20:46]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:24:16] ======== 新窗口 ========
+[18:24:16]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:24:16]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:24:16]    [PIPE ] 人形确认 src=pir phase=primary faces=1 score=100 (decode=57ms infer=74ms)
+[18:24:16]    [TG   ] sendPhoto chat=7960301969 len=9517 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=pir rssi=0 9KB sd=FAIL" token=880029***
+[18:24:16]    [TG  W] sendPhoto retry 1/5 after 1000ms err=open_0x7002
+[18:24:23] ======== 新窗口 ========
+[18:24:23]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:24:23]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:24:23]    [PIPE ] 人形确认 src=pir phase=primary faces=1 score=100 (decode=57ms infer=74ms)
+[18:24:23]    [TG   ] sendPhoto chat=7960301969 len=9517 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=pir rssi=0 9KB sd=FAIL" token=880029***
+[18:24:23]    [TG  W] sendPhoto retry 1/5 after 1000ms err=open_0x7002
+[18:24:23]    [TG   ] sendPhoto ok retry=1
+[18:24:23]    [Q    ] upload ok id=1 ok=1 fail=0
+[18:25:06] ======== 新窗口 ========
+[18:25:06]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:25:06]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:25:06]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=56ms infer=63ms len=7688
+[18:25:15] ======== 新窗口 ========
+[18:25:15]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:25:15]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:25:15]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=56ms infer=63ms len=7990
+[18:25:34] ======== 新窗口 ========
+[18:25:34]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:25:34]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:25:34]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=56ms infer=63ms len=8008
+[18:26:17] ======== 新窗口 ========
+[18:26:17]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:26:17]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:26:17]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=56ms infer=63ms len=8023
+[18:30:48] ======== 新窗口 ========
+[18:30:48]    (无 wake 行)
+[18:31:48] ======== 新窗口 ========
+[18:31:48]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:31:48]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:31:48]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=56ms infer=63ms len=8403
+[18:32:18] ======== 新窗口 ========
+[18:32:18]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:32:18]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[18:32:18]    [PIPE ] 人形确认 src=pir phase=primary faces=1 score=100 (decode=57ms infer=74ms)
+[18:32:18]    [TG   ] sendPhoto chat=7960301969 len=9350 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=pir rssi=0 9KB sd=FAIL" token=880029***
+[18:32:18]    [TG  W] sendPhoto retry 1/5 after 1000ms err=open_0x7002
+[18:32:21] ======== 新窗口 ========
+[18:32:21]    (无 wake 行)
+[18:32:21]    [PIPE ] 人形确认 src=pir phase=primary faces=1 score=100 (decode=57ms infer=74ms)
+[18:32:21]    [PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=55ms infer=63ms len=9407
+[18:32:21]    [TG   ] sendPhoto chat=7960301969 len=9350 caption="ESP32-S3 Snapshot Kit v0.1.2 | trig=pir rssi=0 9KB sd=FAIL" token=880029***
+[18:32:21]    [TG  W] sendPhoto retry 1/5 after 1000ms err=open_0x7002
+[18:33:04] ======== 新窗口 ========
+[18:33:04]    (无 wake 行)
+[18:35:48] ======== 新窗口 ========
+[18:35:48]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:37:19] ======== 新窗口 ========
+[18:37:19]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:37:19]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:38:47] ======== 新窗口 ========
+[18:38:47]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:41:19] ======== 新窗口 ========
+[18:41:19]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:41:19]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:44:06] ======== 新窗口 ========
+[18:44:06]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:46:56] ======== 新窗口 ========
+[18:46:56]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[18:46:56]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[18:47:39] ======== 新窗口 ========
+[18:47:39]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:19:15] ======== 新窗口 ========
+[19:19:15]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:19:15]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[19:20:10] ======== 新窗口 ========
+[19:20:10]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:53:17] ======== 新窗口 ========
+[19:53:17]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[19:53:17]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:05:46] ======== 新窗口 ========
+[20:05:46]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:10:30] ======== 新窗口 ========
+[20:10:30]    (无 wake 行)
+[20:12:52] ======== 新窗口 ========
+[20:12:52]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:12:52]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[20:12:55] ======== 新窗口 ========
+[20:12:55]    (无 wake 行)
+[20:14:53] ======== 新窗口 ========
+[20:14:53]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:14:53]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:16:24] ======== 新窗口 ========
+[20:16:24]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:16:24]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:18:54] ======== 新窗口 ========
+[20:18:54]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:19:34] ======== 新窗口 ========
+[20:19:34]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:19:34]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:21:05] ======== 新窗口 ========
+[20:21:05]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:21:05]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:26:50] ======== 新窗口 ========
+[20:26:50]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:28:24] ======== 新窗口 ========
+[20:28:24]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:28:24]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:28:51] ======== 新窗口 ========
+[20:28:51]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:28:51]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:31:03] ======== 新窗口 ========
+[20:31:03]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:31:40] ======== 新窗口 ========
+[20:31:40]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:31:40]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:32:18] ======== 新窗口 ========
+[20:32:18]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:32:18]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:33:25] ======== 新窗口 ========
+[20:33:25]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:33:25]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:34:33] ======== 新窗口 ========
+[20:34:33]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:35:33] ======== 新窗口 ========
+[20:35:33]    [SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:35:33]    [OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[20:35:44] ======== 新窗口 ========
+[20:35:44]    (无 wake 行)
+[20:37:00] ======== 新窗口 ========
+[20:37:00]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:37:00]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:37:47] ======== 新窗口 ========
+[20:37:47]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:37:47]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:39:18] ======== 新窗口 ========
+[20:39:18]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:39:55] ======== 新窗口 ========
+[20:39:55]    [SYS  ] wake=BOOT0 (cause=2) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:39:55]    [OTA  ] 非冷启动(wake=BOOT0) -> 跳过上电版本检查
+[20:41:48] ======== 新窗口 ========
+[20:41:48]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:43:29] ======== 新窗口 ========
+[20:43:29]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:43:29]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:44:39] ======== 新窗口 ========
+[20:44:39]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:46:10] ======== 新窗口 ========
+[20:46:10]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:46:10]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[20:49:07] ======== 新窗口 ========
+[20:49:07]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:58:14] ======== 新窗口 ========
+[20:58:14]    [SYS  ] wake=TIMER (cause=4) sleep_en=1 poll=60000ms max_awake=30000ms
+[20:58:14]    [OTA  ] 非冷启动(wake=TIMER) -> 跳过上电版本检查
+[21:05:27] ======== 新窗口 ========
+[21:05:27]    [SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[21:06:16] ======== 新窗口 ========
+[21:06:16]    (无 wake 行)

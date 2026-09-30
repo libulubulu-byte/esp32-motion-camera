@@ -1,0 +1,387 @@
+Command: C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe D:\ESP32-IDF\esp-idf-v5.5.1\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM\build\esp32s3_snapshot_kit.elf D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM\build\bootloader\bootloader.elf --force-color -m 'C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'D:\ESP32-IDF\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM9'
+stType    �ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x29 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (25) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 28 2026 13:33:51[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.4[0m
+[0;32mI (32) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (68) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00020000 00300000[0m
+[0;32mI (87) boot:  4 ota_0            OTA app          00 10 00320000 00300000[0m
+[0;32mI (94) boot:  5 ota_1            OTA app          00 11 00620000 00300000[0m
+[0;32mI (100) boot:  6 littlefs         Unknown data     01 82 00920000 003e0000[0m
+[0;32mI (107) boot:  7 human_face_det   Unknown data     01 82 00d00000 00200000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (117) boot: Defaulting to factory image[0m
+[0;32mI (121) esp_image: segment 0: paddr=00020020 vaddr=3c1f0020 size=8033ch (525116) map[0m
+[0;32mI (206) esp_image: segment 1: paddr=000a0364 vaddr=3fca5800 size=05c84h ( 23684) load[0m
+[0;32mI (210) esp_image: segment 2: paddr=000a5ff0 vaddr=40374000 size=0a028h ( 41000) load[0m
+[0;32mI (219) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=1ef834h (2029620) map[0m
+[0;32mI (520) esp_image: segment 4: paddr=0029f85c vaddr=4037e028 size=176fch ( 95996) load[0m
+[0;32mI (538) esp_image: segment 5: paddr=002b6f60 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (539) esp_image: segment 6: paddr=002b6f88 vaddr=600fe000 size=0006ch (   108) load[0m
+[0;32mI (555) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (555) boot: Disabling RNG early entropy source...[0m
+[0;32mI (566) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (566) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (566) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (568) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (572) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (576) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (580) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (585) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (590) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (595) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (600) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (605) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (609) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (612) esp_psram: Speed: 80MHz[0m
+[0;32mI (615) cpu_start: Multicore app[0m
+[0;32mI (1051) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1059) cpu_start: Pro cpu start user code[0m
+[0;32mI (1060) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1060) app_init: Application information:[0m
+[0;32mI (1060) app_init: Project name:     esp32s3_snapshot_kit[0m
+[0;32mI (1065) app_init: App version:      0.1.2[0m
+[0;32mI (1069) app_init: Compile time:     Sep 28 2026 13:32:40[0m
+[0;32mI (1074) app_init: ELF file SHA256:  2ec325825...[0m
+[0;32mI (1078) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (1083) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1087) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1091) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1095) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1101) heap_init: At 3FCB9A98 len 0002FC78 (191 KiB): RAM[0m
+[0;32mI (1106) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1112) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1117) heap_init: At 600FE06C len 00001F7C (7 KiB): RTCRAM[0m
+[0;32mI (1122) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1129) spi_flash: detected chip: boya[0m
+[0;32mI (1132) spi_flash: flash io: qio[0m
+[0;32mI (1136) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1142) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1149) main_task: Started on CPU0[0m
+[0;32mI (1173) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1173) main_task: Calling app_main()[0m
+[BOOT ] ESP32-S3 Snapshot Kit v0.1.2 sensor=OV3660(0x0000) sd_mode=OPTIONAL
+[BOOT ] idf=v5.5.1-dirty chip=ESP32-S3 rev=2 flash=16384KB psram=8192KB(OCT) reset=POWERON
+[BOOT ] mac=28:84:85:92:2F:44
+[LED  ] init ok ws2812=gpio48(rmt) green=gpio2(active_low)
+[LED  ] buzzer init ok gpio=47 (active_high, alert=120ms/880ms)
+[OTA  ] last_result=none running=factory
+[CFG  ] littlefs total=3968KB used=12KB cfg=ok
+[CFG  ] load ok device_id=cam-2f44
+[SYS  ] wake=COLD (cause=0) sleep_en=0 poll=60000ms max_awake=30000ms
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[1;31mE (1295) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (1296) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[SD   ] state=FAIL -> degrade queue_mode=buffer retry=30s
+[0;32mI (1307) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (1310) cam_hal: cam init ok[0m
+[0;32mI (1312) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (1316) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (1330) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (1331) camera: Detected OV3660 camera[0m
+[0;32mI (1331) camera: Detected camera at address=0x3c[0m
+[0;32mI (1643) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1643) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (1645) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1651) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1657) cam_hal: cam config ok[0m
+[0;32mI (1672) ov3660: Calculated VCO: 200000000 Hz, PLLCLK: 200000000 Hz, SYSCLK: 50000000 Hz, PCLK: 10000000 Hz[0m
+[CAM  ] init ok sensor=OV3660 pid=0x3660 frame=VGA(640x480) q=12 xclk=20MHz fb=2xPSRAM
+[0;32mI (1694) pp: pp rom version: e7ae62f[0m
+[0;32mI (1694) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1697) wifi:wifi driver task: 3fccfdf4, prio:23, stack:6656, core=0[0m
+[0;32mI (1706) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1706) wifi:wifi certification version: v7.0[0m
+[0;32mI (1710) wifi:config NVS flash: enabled[0m
+[0;32mI (1714) wifi:config nano formatting: disabled[0m
+[0;32mI (1718) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1723) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1727) wifi:Init management short buffer num: 32[0m
+[0;32mI (1732) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1736) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1739) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1743) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1748) wifi:Init static rx buffer num: 16[0m
+[0;32mI (1751) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1756) wifi_init: rx ba win: 16[0m
+[0;32mI (1759) wifi_init: accept mbox: 6[0m
+[0;32mI (1762) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1765) wifi_init: udp mbox: 6[0m
+[0;32mI (1768) wifi_init: tcp mbox: 6[0m
+[0;32mI (1770) wifi_init: tcp tx win: 16384[0m
+[0;32mI (1774) wifi_init: tcp rx win: 16384[0m
+[0;32mI (1777) wifi_init: tcp mss: 1440[0m
+[0;32mI (1780) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1784) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1788) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1792) wifi:Set ps type: 1, coexist: 0[0m
+
+[0;33mW (1796) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1805) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1850) wifi:mode : sta (28:84:85:92:2f:44)[0m
+[0;32mI (1850) wifi:enable tsf[0m
+[WIFI ] sta connecting ssid=HONOR
+[SYS  ] sntp start server=192.168.137.1 tz=CST-8
+[0;32mI (1858) mdns_mem: mDNS task will be created from internal RAM[0m
+[WEB  ] mdns: http://esp32s3cam.local
+[WEB  ] httpd started port=80 endpoints=ready ip=192.168.4.1
+[MQTT ] deferred -> 等 STA 拿到 IP 后再连 mqtt://192.168.137.1:1883
+[PIPE ] detector created (MSRMNP_S8_V1, lazy load)
+[0;33mW (1953) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;33mW (1998) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[PIPE ] 模型就绪 123ms，PSRAM 余量 7599KB
+[SYS  ] human detect ready: 只有检出人脸的帧才会入队上传
+[Q    ] init ok max=8 policy=drop_new backend=buffer
+[PIPE ] init ok mode=buffer last_raw_cap=2048KB psram=7782112
+[TRIG ] pir ready gpio=1 active_high debounce=300ms
+[LED  ] button init ok gpio=0 BOOT0 (active_low, short=<2000ms->人脸识别, long=5000ms->恢复出厂, boot_ignore=2000ms)
+[TRIG ] init ok armed=1 interval=3000ms timer=0ms
+[SYS  ] heap=7822108 psram=7781716 armed=1 upload=telegram
+[0;32mI (2046) main_task: Returned from app_main()[0m
+[0;32mI (3171) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3172) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3202) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3244) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3276) wifi:connected with HONOR, aid = 1, channel 11, 40D, bssid = 56:c2:e8:64:38:f3[0m
+[0;32mI (3276) wifi:security: WPA2-PSK, phy: bgn, rssi: -43[0m
+[0;32mI (3277) wifi:pm start, type: 1[0m
+
+[0;32mI (3280) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3288) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3297) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[TRIG ] src=pir state=DEBOUNCE level=1
+[TRIG ] src=pir state=CAPTURE note=pir count=1
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=8515 age=2200ms (早于本次请求)
+[CAM W] drop stale frame len=8604 age=2165ms (早于本次请求)
+[LED  ] button ready after boot window: gpio=0 pressed=0
+[CAM  ] grab ok len=8641 age=36ms drained=2
+[PIPE ] 体积基准未建立：丢弃本帧样本 len=8641（下一帧起生效）
+[PIPE ] grab ok len=8641 fb=0x3c280ef0 psram_after=7780940
+[0;32mI (4129) detect: pre: 6818 us[0m
+[0;32mI (4184) detect: model: 55422 us[0m
+[0;32mI (4185) detect: post: 350 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (4193) detect: pre: 6615 us[0m
+[0;32mI (4218) wifi:<ba-add>idx:0 (ifx:0, 56:c2:e8:64:38:f3), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4249) detect: model: 56123 us[0m
+[0;32mI (4250) detect: post: 364 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=55ms infer=64ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=55ms infer=64ms len=8641
+[PIPE ] capture took=589ms flash=300ms grab=71ms retake=0
+[PIPE ] done psram=7770564 min=7770564 heap=7819784
+[TRIGE] capture pipeline failed src=pir
+[0;32mI (4357) esp_netif_handlers: sta ip: 192.168.137.128, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[WIFI ] connected ip=192.168.137.128 rssi=-44
+[MQTT ] start uri=mqtt://192.168.137.1:1883 topic=esp32S3_CAM/288485922F44/event
+[OTA  ] STA up (ip=192.168.137.128 rssi=-44) -> 检查新版本
+[OTA  ] check version: running=0.1.2 url=http://192.168.137.1:8081/ota.json
+[MQTT ] connected
+[OTA  ] manifest: {"md5":"d99903d920318e7ec25dc22637b11fbb","size":1356816,"url":"http://192.168.137.1:8081/firmware/esp32s3_snapshot_kit.
+[OTA  ] up to date: server=0.1.2 running=0.1.2 (相同)
+[0;32mI (6647) esp-x509-crt-bundle: Certificate validated[0m
+[SYS  ] sntp ok tz=CST-8 time=2026-09-28 16:13:36
+[0;32mI (17401) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (27947) esp-x509-crt-bundle: Certificate validated[0m
+[SD   ] retry mount start (attempt 1)
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[0;32mI (31307) sdmmc_periph: sdmmc_host_init: SDMMC host already initialized, skipping init flow[0m
+[1;31mE (31339) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (31340) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[0;32mI (38596) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (49146) esp-x509-crt-bundle: Certificate validated[0m
+[TRIG ] src=pir state=DEBOUNCE level=1
+[TRIG ] src=pir state=CAPTURE note=pir count=2
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=8625 age=53390ms (早于本次请求)
+[CAM W] drop stale frame len=8617 age=53139ms (早于本次请求)
+[CAM  ] grab ok len=8607 age=36ms drained=2
+[PIPE ] grab ok len=8607 fb=0x3c280ef0 psram_after=7767836
+[0;32mI (57573) detect: pre: 6761 us[0m
+[0;32mI (57628) detect: model: 54901 us[0m
+[0;32mI (57629) detect: post: 349 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (57637) detect: pre: 6596 us[0m
+[0;32mI (57693) detect: model: 55099 us[0m
+[0;32mI (57693) detect: post: 348 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=55ms infer=62ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=55ms infer=62ms len=8607
+[PIPE ] capture took=574ms flash=300ms grab=61ms retake=0
+[PIPE ] done psram=7767836 min=7767836 heap=7806752
+[TRIGE] capture pipeline failed src=pir
+[0;32mI (59809) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (70444) esp-x509-crt-bundle: Certificate validated[0m
+[TRIG ] src=pir state=DEBOUNCE level=1
+[TRIG ] src=pir state=CAPTURE note=pir count=3
+[PIPE ] grab start flash=300ms retake=on ref=8607
+[CAM W] drop stale frame len=8602 age=23053ms (早于本次请求)
+[CAM W] drop stale frame len=8605 age=22802ms (早于本次请求)
+[CAM  ] grab ok len=8615 age=36ms drained=2
+[PIPE ] grab ok len=8615 fb=0x3c280ef0 psram_after=7744112
+[0;32mI (80696) detect: pre: 6843 us[0m
+[0;32mI (80751) detect: model: 54827 us[0m
+[0;32mI (80752) detect: post: 348 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (80760) detect: pre: 6656 us[0m
+[0;32mI (80816) detect: model: 55188 us[0m
+[0;32mI (80817) detect: post: 342 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=55ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=55ms infer=63ms len=8615
+[PIPE ] capture took=584ms flash=300ms grab=72ms retake=0
+[PIPE ] done psram=7744132 min=7744132 heap=7775036
+[TRIGE] capture pipeline failed src=pir
+[0;32mI (80994) esp-x509-crt-bundle: Certificate validated[0m
+[TRIG ] src=pir state=DEBOUNCE level=1
+[TRIG ] src=pir state=CAPTURE note=pir count=4
+[PIPE ] grab start flash=300ms retake=on ref=8615
+[CAM W] drop stale frame len=8606 age=6915ms (早于本次请求)
+[CAM W] drop stale frame len=8602 age=6664ms (早于本次请求)
+[CAM  ] grab ok len=8604 age=36ms drained=2
+[PIPE ] grab ok len=8604 fb=0x3c280ef0 psram_after=7767200
+[0;32mI (87684) detect: pre: 6759 us[0m
+[0;32mI (87739) detect: model: 54761 us[0m
+[0;32mI (87739) detect: post: 342 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (87748) detect: pre: 6599 us[0m
+[0;32mI (87803) detect: model: 54930 us[0m
+[0;32mI (87804) detect: post: 343 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=55ms infer=62ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=55ms infer=62ms len=8604
+[PIPE ] capture took=586ms flash=300ms grab=74ms retake=0
+[PIPE ] done psram=7767200 min=7744132 heap=7806116
+[TRIGE] capture pipeline failed src=pir
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[0;32mI (91346) sdmmc_periph: sdmmc_host_init: SDMMC host already initialized, skipping init flow[0m
+[1;31mE (91375) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (91376) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[0;32mI (91641) esp-x509-crt-bundle: Certificate validated[0m
+[TRIG ] src=pir state=DEBOUNCE level=1
+[TRIG ] src=pir state=CAPTURE note=pir count=5
+[PIPE ] grab start flash=300ms retake=on ref=8604
+[CAM W] drop stale frame len=8601 age=9432ms (早于本次请求)
+[CAM W] drop stale frame len=8595 age=9181ms (早于本次请求)
+[CAM  ] grab ok len=8592 age=36ms drained=2
+[PIPE ] grab ok len=8592 fb=0x3c280eb8 psram_after=7766988
+[0;32mI (97156) detect: pre: 6766 us[0m
+[0;32mI (97213) detect: model: 56692 us[0m
+[0;32mI (97214) detect: post: 345 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (97222) detect: pre: 6590 us[0m
+[0;32mI (97277) detect: model: 55252 us[0m
+[0;32mI (97278) detect: post: 350 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=55ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=55ms infer=63ms len=8592
+[PIPE ] capture took=556ms flash=300ms grab=41ms retake=0
+[PIPE ] done psram=7766988 min=7744132 heap=7805904
+[TRIGE] capture pipeline failed src=pir
+[0;32mI (102105) esp-x509-crt-bundle: Certificate validated[0m
+[TRIG ] src=pir state=DEBOUNCE level=1
+[TRIG ] src=pir state=CAPTURE note=pir count=6
+[PIPE ] grab start flash=300ms retake=on ref=8592
+[CAM W] drop stale frame len=8593 age=10437ms (早于本次请求)
+[CAM W] drop stale frame len=8598 age=10186ms (早于本次请求)
+[CAM  ] grab ok len=8590 age=36ms drained=2
+[PIPE ] grab ok len=8590 fb=0x3c280eb8 psram_after=7767076
+[0;32mI (107637) detect: pre: 6934 us[0m
+[0;32mI (107692) detect: model: 54823 us[0m
+[0;32mI (107693) detect: post: 350 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (107701) detect: pre: 6617 us[0m
+[0;32mI (107759) detect: model: 57067 us[0m
+[0;32mI (107759) detect: post: 342 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=55ms infer=64ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=55ms infer=64ms len=8590
+[PIPE ] capture took=560ms flash=300ms grab=46ms retake=0
+[PIPE ] done psram=7766732 min=7744132 heap=7805720
+[TRIGE] capture pipeline failed src=pir
+[0;32mI (112641) esp-x509-crt-bundle: Certificate validated[0m
+[TRIG ] src=pir state=DEBOUNCE level=1
+[TRIG ] src=pir state=CAPTURE note=pir count=7
+[PIPE ] grab start flash=300ms retake=on ref=8590
+[CAM W] drop stale frame len=8588 age=11915ms (早于本次请求)
+[CAM W] drop stale frame len=8600 age=11664ms (早于本次请求)
+[CAM  ] grab ok len=8581 age=36ms drained=2
+[PIPE ] grab ok len=8581 fb=0x3c280eb8 psram_after=7764996
+[0;32mI (119595) detect: pre: 6757 us[0m
+[0;32mI (119651) detect: model: 55028 us[0m
+[0;32mI (119651) detect: post: 341 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (119660) detect: pre: 6711 us[0m
+[0;32mI (119715) detect: model: 54931 us[0m
+[0;32mI (119716) detect: post: 341 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=56ms infer=62ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=56ms infer=62ms len=8581
+[PIPE ] capture took=558ms flash=300ms grab=44ms retake=0
+[PIPE ] done psram=7766564 min=7744132 heap=7805480
+[TRIGE] capture pipeline failed src=pir
+[0;32mI (123286) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (133762) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (144523) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (155179) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (165720) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (176663) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (187697) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (198182) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (208762) esp-x509-crt-bundle: Certificate validated[0m
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[0;32mI (211382) sdmmc_periph: sdmmc_host_init: SDMMC host already initialized, skipping init flow[0m
+[1;31mE (211411) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (211412) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[0;32mI (219441) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (230706) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (241356) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (253399) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (263973) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (277710) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (288249) esp-x509-crt-bundle: Certificate validated[0m

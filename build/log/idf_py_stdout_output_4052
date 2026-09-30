@@ -1,0 +1,1393 @@
+Command: C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe D:\ESP32-IDF\esp-idf-v5.5.1\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM\build\esp32s3_snapshot_kit.elf D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM\build\bootloader\bootloader.elf --force-color -m 'C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'D:\ESP32-IDF\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM9'
+�.U����ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x29 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (25) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 28 2026 13:33:51[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.4[0m
+[0;32mI (32) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (68) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (74) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (81) boot:  3 factory          factory app      00 00 00020000 00300000[0m
+[0;32mI (87) boot:  4 ota_0            OTA app          00 10 00320000 00300000[0m
+[0;32mI (94) boot:  5 ota_1            OTA app          00 11 00620000 00300000[0m
+[0;32mI (100) boot:  6 littlefs         Unknown data     01 82 00920000 003e0000[0m
+[0;32mI (107) boot:  7 human_face_det   Unknown data     01 82 00d00000 00200000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (117) boot: Defaulting to factory image[0m
+[0;32mI (121) esp_image: segment 0: paddr=00020020 vaddr=3c1f0020 size=802bch (524988) map[0m
+[0;32mI (206) esp_image: segment 1: paddr=000a02e4 vaddr=3fca5800 size=05c84h ( 23684) load[0m
+[0;32mI (210) esp_image: segment 2: paddr=000a5f70 vaddr=40374000 size=0a0a8h ( 41128) load[0m
+[0;32mI (219) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=1ef7bch (2029500) map[0m
+[0;32mI (520) esp_image: segment 4: paddr=0029f7e4 vaddr=4037e0a8 size=1767ch ( 95868) load[0m
+[0;32mI (538) esp_image: segment 5: paddr=002b6e68 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (539) esp_image: segment 6: paddr=002b6e90 vaddr=600fe000 size=0006ch (   108) load[0m
+[0;32mI (555) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (555) boot: Disabling RNG early entropy source...[0m
+[0;32mI (565) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (566) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (566) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (568) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (572) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (576) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (580) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (585) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (590) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (595) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (600) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (605) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (609) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (612) esp_psram: Speed: 80MHz[0m
+[0;32mI (615) cpu_start: Multicore app[0m
+[0;32mI (1051) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1059) cpu_start: Pro cpu start user code[0m
+[0;32mI (1059) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1060) app_init: Application information:[0m
+[0;32mI (1060) app_init: Project name:     esp32s3_snapshot_kit[0m
+[0;32mI (1065) app_init: App version:      0.1.2[0m
+[0;32mI (1069) app_init: Compile time:     Sep 28 2026 13:32:40[0m
+[0;32mI (1074) app_init: ELF file SHA256:  4e3053306...[0m
+[0;32mI (1078) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (1083) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1087) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1091) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1095) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1101) heap_init: At 3FCB9A98 len 0002FC78 (191 KiB): RAM[0m
+[0;32mI (1106) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1111) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1117) heap_init: At 600FE06C len 00001F7C (7 KiB): RTCRAM[0m
+[0;32mI (1122) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1129) spi_flash: detected chip: boya[0m
+[0;32mI (1132) spi_flash: flash io: qio[0m
+[0;32mI (1136) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1142) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1149) main_task: Started on CPU0[0m
+[0;32mI (1173) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1173) main_task: Calling app_main()[0m
+[BOOT ] ESP32-S3 Snapshot Kit v0.1.2 sensor=OV3660(0x0000) sd_mode=OPTIONAL
+[BOOT ] idf=v5.5.1-dirty chip=ESP32-S3 rev=2 flash=16384KB psram=8192KB(OCT) reset=POWERON
+[BOOT ] mac=28:84:85:92:2F:44
+[LED  ] init ok ws2812=gpio48(rmt) green=gpio2(active_low)
+[LED  ] buzzer init ok gpio=47 (active_high, alert=120ms/880ms)
+[OTA  ] last_result=none running=factory
+[CFG  ] littlefs total=3968KB used=12KB cfg=ok
+[CFG  ] load ok device_id=cam-2f44
+[SYS  ] wake=COLD (cause=0) sleep_en=1 poll=60000ms max_awake=30000ms
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[1;31mE (1288) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (1289) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[SD   ] state=FAIL -> degrade queue_mode=buffer retry=30s
+[0;32mI (1300) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (1303) cam_hal: cam init ok[0m
+[0;32mI (1305) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (1309) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (1323) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (1324) camera: Detected OV3660 camera[0m
+[0;32mI (1324) camera: Detected camera at address=0x3c[0m
+[0;32mI (1636) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1636) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (1638) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1644) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1650) cam_hal: cam config ok[0m
+[0;32mI (1665) ov3660: Calculated VCO: 200000000 Hz, PLLCLK: 200000000 Hz, SYSCLK: 50000000 Hz, PCLK: 10000000 Hz[0m
+[CAM  ] init ok sensor=OV3660 pid=0x3660 frame=VGA(640x480) q=12 xclk=20MHz fb=2xPSRAM
+[0;32mI (1687) pp: pp rom version: e7ae62f[0m
+[0;32mI (1687) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1690) wifi:wifi driver task: 3fcd0b5c, prio:23, stack:6656, core=0[0m
+[0;32mI (1699) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1699) wifi:wifi certification version: v7.0[0m
+[0;32mI (1703) wifi:config NVS flash: enabled[0m
+[0;32mI (1707) wifi:config nano formatting: disabled[0m
+[0;32mI (1711) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1716) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1720) wifi:Init management short buffer num: 32[0m
+[0;32mI (1725) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1729) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1732) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1736) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1741) wifi:Init static rx buffer num: 16[0m
+[0;32mI (1744) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1749) wifi_init: rx ba win: 16[0m
+[0;32mI (1751) wifi_init: accept mbox: 6[0m
+[0;32mI (1755) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1758) wifi_init: udp mbox: 6[0m
+[0;32mI (1761) wifi_init: tcp mbox: 6[0m
+[0;32mI (1763) wifi_init: tcp tx win: 16384[0m
+[0;32mI (1767) wifi_init: tcp rx win: 16384[0m
+[0;32mI (1770) wifi_init: tcp mss: 1440[0m
+[0;32mI (1773) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1777) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1781) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1785) wifi:Set ps type: 1, coexist: 0[0m
+
+[0;33mW (1789) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1797) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1840) wifi:mode : sta (28:84:85:92:2f:44)[0m
+[0;32mI (1840) wifi:enable tsf[0m
+[WIFI ] sta connecting ssid=HONOR
+[SYS  ] sntp start server=192.168.137.1 tz=CST-8
+[0;32mI (1848) mdns_mem: mDNS task will be created from internal RAM[0m
+[WEB  ] mdns: http://esp32s3cam.local
+[WEB  ] httpd started port=80 endpoints=ready ip=192.168.4.1
+[MQTT ] deferred -> 等 STA 拿到 IP 后再连 mqtt://192.168.137.1:1883
+[PIPE ] detector created (MSRMNP_S8_V1, lazy load)
+[0;33mW (1943) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;33mW (1989) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[PIPE ] 模型就绪 123ms，PSRAM 余量 7599KB
+[SYS  ] human detect ready: 只有检出人脸的帧才会入队上传
+[Q    ] init ok max=8 policy=drop_new backend=buffer
+[PIPE ] init ok mode=buffer last_raw_cap=2048KB psram=7782112
+[TRIG ] pir ready gpio=1 active_high debounce=300ms
+[LED  ] button init ok gpio=0 BOOT0 (active_low, short=<2000ms->人脸识别, long=5000ms->恢复出厂, boot_ignore=2000ms)
+[TRIG ] init ok armed=1 interval=3000ms timer=0ms
+[SYS  ] heap=7818720 psram=7781716 armed=1 upload=telegram
+[0;32mI (2036) main_task: Returned from app_main()[0m
+[TRIG ] src=pir state=DEBOUNCE level=1
+[TRIG ] src=pir state=CAPTURE note=pir count=1
+[0;32mI (3139) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3140) wifi:state: init -> auth (0xb0)[0m
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=8418 age=1361ms (早于本次请求)
+[CAM W] drop stale frame len=8489 age=1330ms (早于本次请求)
+[0;32mI (3154) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3171) wifi:state: assoc -> run (0x10)[0m
+[CAM  ] grab ok len=8517 age=36ms drained=2
+[PIPE ] 体积基准未建立：丢弃本帧样本 len=8517（下一帧起生效）
+[PIPE ] grab ok len=8517 fb=0x3c280eb8 psram_after=7781712
+[0;32mI (3206) wifi:connected with HONOR, aid = 1, channel 11, 40D, bssid = 56:c2:e8:64:38:f3[0m
+[0;32mI (3206) wifi:security: WPA2-PSK, phy: bgn, rssi: -44[0m
+[0;32mI (3208) wifi:pm start, type: 1[0m
+
+[0;32mI (3210) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3218) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3261) detect: pre: 6895 us[0m
+[0;32mI (3298) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3318) detect: model: 56726 us[0m
+[0;32mI (3319) detect: post: 340 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (3327) detect: pre: 6868 us[0m
+[0;32mI (3382) detect: model: 54799 us[0m
+[0;32mI (3383) detect: post: 344 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x94D3 R=144 G=152 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=59ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=59ms infer=63ms len=8517
+[PIPE ] capture took=568ms flash=300ms grab=46ms retake=0
+[PIPE ] done psram=7770648 min=7770648 heap=7816480
+[LED  ] button ready after boot window: gpio=0 pressed=0
+[0;32mI (4237) wifi:<ba-add>idx:0 (ifx:0, 56:c2:e8:64:38:f3), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4270) esp_netif_handlers: sta ip: 192.168.137.128, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[WIFI ] connected ip=192.168.137.128 rssi=-43
+[MQTT ] start uri=mqtt://192.168.137.1:1883 topic=esp32S3_CAM/288485922F44/event
+[OTA  ] STA up (ip=192.168.137.128 rssi=-43) -> 检查新版本
+[OTA  ] check version: running=0.1.2 url=http://192.168.137.1:8081/ota.json
+[MQTT ] connected
+[OTA  ] manifest: {"md5":"d99903d920318e7ec25dc22637b11fbb","size":1356816,"url":"http://192.168.137.1:8081/firmware/esp32s3_snapshot_kit.
+[OTA  ] up to date: server=0.1.2 running=0.1.2 (相同)
+[SYS  ] 进入 deep sleep: reason=work_done 唤醒源=PIR(GPIO1,高)/BOOT0(GPIO0,低)/定时
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x5 (DSLEEP),boot:0x29 (SPI_FAST_FLASH_BOOT)
+pro cpu reset by JTAG
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (26) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2026 13:33:51[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.4[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (46) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (76) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 factory          factory app      00 00 00020000 00300000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00320000 00300000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00620000 00300000[0m
+[0;32mI (102) boot:  6 littlefs         Unknown data     01 82 00920000 003e0000[0m
+[0;32mI (109) boot:  7 human_face_det   Unknown data     01 82 00d00000 00200000[0m
+[0;32mI (115) boot: End of partition table[0m
+[0;32mI (119) boot: Defaulting to factory image[0m
+[0;32mI (122) esp_image: segment 0: paddr=00020020 vaddr=3c1f0020 size=802bch (524988) map[0m
+[0;32mI (208) esp_image: segment 1: paddr=000a02e4 vaddr=3fca5800 size=05c84h ( 23684) load[0m
+[0;32mI (212) esp_image: segment 2: paddr=000a5f70 vaddr=40374000 size=0a0a8h ( 41128) load[0m
+[0;32mI (220) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=1ef7bch (2029500) map[0m
+[0;32mI (522) esp_image: segment 4: paddr=0029f7e4 vaddr=4037e0a8 size=1767ch ( 95868) load[0m
+[0;32mI (540) esp_image: segment 5: paddr=002b6e68 vaddr=50000000 size=00020h (    32) [0m
+[0;32mI (540) esp_image: segment 6: paddr=002b6e90 vaddr=600fe000 size=0006ch (   108) [0m
+[0;32mI (556) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (556) boot: Disabling RNG early entropy source...[0m
+[0;32mI (566) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (567) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (567) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (569) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (573) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (577) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (581) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (586) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (591) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (596) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (601) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (606) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (610) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (613) esp_psram: Speed: 80MHz[0m
+[0;32mI (616) cpu_start: Multicore app[0m
+[0;32mI (1052) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1060) cpu_start: Pro cpu start user code[0m
+[0;32mI (1060) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1061) app_init: Application information:[0m
+[0;32mI (1061) app_init: Project name:     esp32s3_snapshot_kit[0m
+[0;32mI (1066) app_init: App version:      0.1.2[0m
+[0;32mI (1070) app_init: Compile time:     Sep 28 2026 13:32:40[0m
+[0;32mI (1075) app_init: ELF file SHA256:  4e3053306...[0m
+[0;32mI (1079) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (1084) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1088) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1092) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1096) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1102) heap_init: At 3FCB9A98 len 0002FC78 (191 KiB): RAM[0m
+[0;32mI (1107) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1112) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1118) heap_init: At 600FE06C len 00001F7C (7 KiB): RTCRAM[0m
+[0;32mI (1123) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1130) spi_flash: detected chip: boya[0m
+[0;32mI (1133) spi_flash: flash io: qio[0m
+[0;32mI (1137) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1143) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1150) main_task: Started on CPU0[0m
+[0;32mI (1174) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1174) main_task: Calling app_main()[0m
+[BOOT ] ESP32-S3 Snapshot Kit v0.1.2 sensor=OV3660(0x0000) sd_mode=OPTIONAL
+[BOOT ] idf=v5.5.1-dirty chip=ESP32-S3 rev=2 flash=16384KB psram=8192KB(OCT) reset=DEEPSLEEP
+[BOOT ] mac=28:84:85:92:2F:44
+[LED  ] init ok ws2812=gpio48(rmt) green=gpio2(active_low)
+[LED  ] buzzer init ok gpio=47 (active_high, alert=120ms/880ms)
+[OTA  ] last_result=none running=factory
+[CFG  ] littlefs total=3968KB used=12KB cfg=ok
+[CFG  ] load ok device_id=cam-2f44
+[SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[1;31mE (1298) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (1299) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[SD   ] state=FAIL -> degrade queue_mode=buffer retry=30s
+[0;32mI (1310) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (1313) cam_hal: cam init ok[0m
+[0;32mI (1315) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (1319) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (1333) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (1334) camera: Detected OV3660 camera[0m
+[0;32mI (1334) camera: Detected camera at address=0x3c[0m
+[0;32mI (1646) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1646) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (1648) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1654) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1660) cam_hal: cam config ok[0m
+[0;32mI (1675) ov3660: Calculated VCO: 200000000 Hz, PLLCLK: 200000000 Hz, SYSCLK: 50000000 Hz, PCLK: 10000000 Hz[0m
+[CAM  ] init ok sensor=OV3660 pid=0x3660 frame=VGA(640x480) q=12 xclk=20MHz fb=2xPSRAM
+[0;32mI (1697) pp: pp rom version: e7ae62f[0m
+[0;32mI (1697) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1700) wifi:wifi driver task: 3fcd0b5c, prio:23, stack:6656, core=0[0m
+[0;32mI (1709) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1709) wifi:wifi certification version: v7.0[0m
+[0;32mI (1713) wifi:config NVS flash: enabled[0m
+[0;32mI (1717) wifi:config nano formatting: disabled[0m
+[0;32mI (1721) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1726) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1730) wifi:Init management short buffer num: 32[0m
+[0;32mI (1735) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1739) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1742) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1746) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1751) wifi:Init static rx buffer num: 16[0m
+[0;32mI (1754) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1759) wifi_init: rx ba win: 16[0m
+[0;32mI (1761) wifi_init: accept mbox: 6[0m
+[0;32mI (1765) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1768) wifi_init: udp mbox: 6[0m
+[0;32mI (1771) wifi_init: tcp mbox: 6[0m
+[0;32mI (1773) wifi_init: tcp tx win: 16384[0m
+[0;32mI (1777) wifi_init: tcp rx win: 16384[0m
+[0;32mI (1780) wifi_init: tcp mss: 1440[0m
+[0;32mI (1783) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1787) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1791) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1795) wifi:Set ps type: 1, coexist: 0[0m
+
+[0;33mW (1799) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1808) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1837) wifi:mode : sta (28:84:85:92:2f:44)[0m
+[0;32mI (1838) wifi:enable tsf[0m
+[WIFI ] sta connecting ssid=HONOR
+[SYS  ] sntp start server=192.168.137.1 tz=CST-8
+[0;32mI (1845) mdns_mem: mDNS task will be created from internal RAM[0m
+[WEB  ] mdns: http://esp32s3cam.local
+[WEB  ] httpd started port=80 endpoints=ready ip=192.168.4.1
+[MQTT ] deferred -> 等 STA 拿到 IP 后再连 mqtt://192.168.137.1:1883
+[PIPE ] detector created (MSRMNP_S8_V1, lazy load)
+[0;33mW (1941) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;33mW (1987) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[PIPE ] 模型就绪 124ms，PSRAM 余量 7599KB
+[SYS  ] human detect ready: 只有检出人脸的帧才会入队上传
+[Q    ] init ok max=8 policy=drop_new backend=buffer
+[PIPE ] init ok mode=buffer last_raw_cap=2048KB psram=7782112
+[TRIG ] pir ready gpio=1 active_high debounce=300ms
+[LED  ] button init ok gpio=0 BOOT0 (active_low, short=<2000ms->人脸识别, long=5000ms->恢复出厂, boot_ignore=2000ms)
+[TRIG ] init ok armed=1 interval=3000ms timer=0ms
+[OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[SYS  ] PIR 唤醒 -> 立即触发一次抓拍
+[TRIG ] src=pir state=DEBOUNCE note=remote
+[TRIG ] src=pir state=CAPTURE note=remote count=1
+[SYS  ] heap=7827252 psram=7781716 armed=1 upload=telegram
+[0;32mI (2052) main_task: Returned from app_main()[0m
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=10598 age=554ms (早于本次请求)
+[CAM W] drop stale frame len=10811 age=519ms (早于本次请求)
+[CAM  ] grab ok len=10775 age=36ms drained=2
+[PIPE ] 体积基准未建立：丢弃本帧样本 len=10775（下一帧起生效）
+[PIPE ] grab ok len=10775 fb=0x3c280ef0 psram_after=7781732
+[0;32mI (2478) detect: pre: 6929 us[0m
+[0;32mI (2534) detect: model: 55356 us[0m
+[0;32mI (2535) detect: post: 345 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (2543) detect: pre: 6691 us[0m
+[0;32mI (2598) detect: model: 55246 us[0m
+[0;32mI (2599) detect: post: 345 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9BD0 R=152 G=120 B=128 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=58ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=58ms infer=63ms len=10775
+[PIPE ] capture took=582ms flash=300ms grab=60ms retake=0
+[PIPE ] done psram=7769164 min=7769164 heap=7823760
+[0;32mI (3151) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3152) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3169) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3175) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3268) wifi:connected with HONOR, aid = 1, channel 11, 40D, bssid = 56:c2:e8:64:38:f3[0m
+[0;32mI (3268) wifi:security: WPA2-PSK, phy: bgn, rssi: -45[0m
+[0;32mI (3269) wifi:pm start, type: 1[0m
+
+[0;32mI (3272) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3280) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3313) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[SYS  ] 进入 deep sleep: reason=work_done 唤醒源=PIR(GPIO1,高)/BOOT0(GPIO0,低)/定时
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x5 (DSLEEP),boot:0x29 (SPI_FAST_FLASH_BOOT)
+pro cpu reset by JTAG
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (26) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2026 13:33:51[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.4[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (46) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (76) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 factory          factory app      00 00 00020000 00300000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00320000 00300000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00620000 00300000[0m
+[0;32mI (102) boot:  6 littlefs         Unknown data     01 82 00920000 003e0000[0m
+[0;32mI (109) boot:  7 human_face_det   Unknown data     01 82 00d00000 00200000[0m
+[0;32mI (115) boot: End of partition table[0m
+[0;32mI (119) boot: Defaulting to factory image[0m
+[0;32mI (122) esp_image: segment 0: paddr=00020020 vaddr=3c1f0020 size=802bch (524988) map[0m
+[0;32mI (208) esp_image: segment 1: paddr=000a02e4 vaddr=3fca5800 size=05c84h ( 23684) load[0m
+[0;32mI (212) esp_image: segment 2: paddr=000a5f70 vaddr=40374000 size=0a0a8h ( 41128) load[0m
+[0;32mI (220) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=1ef7bch (2029500) map[0m
+[0;32mI (522) esp_image: segment 4: paddr=0029f7e4 vaddr=4037e0a8 size=1767ch ( 95868) load[0m
+[0;32mI (540) esp_image: segment 5: paddr=002b6e68 vaddr=50000000 size=00020h (    32) [0m
+[0;32mI (540) esp_image: segment 6: paddr=002b6e90 vaddr=600fe000 size=0006ch (   108) [0m
+[0;32mI (556) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (556) boot: Disabling RNG early entropy source...[0m
+[0;32mI (566) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (567) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (567) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (569) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (573) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (577) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (581) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (586) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (591) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (596) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (601) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (606) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (610) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (613) esp_psram: Speed: 80MHz[0m
+[0;32mI (616) cpu_start: Multicore app[0m
+[0;32mI (1052) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1060) cpu_start: Pro cpu start user code[0m
+[0;32mI (1060) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1061) app_init: Application information:[0m
+[0;32mI (1061) app_init: Project name:     esp32s3_snapshot_kit[0m
+[0;32mI (1066) app_init: App version:      0.1.2[0m
+[0;32mI (1070) app_init: Compile time:     Sep 28 2026 13:32:40[0m
+[0;32mI (1075) app_init: ELF file SHA256:  4e3053306...[0m
+[0;32mI (1079) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (1084) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1088) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1092) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1096) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1102) heap_init: At 3FCB9A98 len 0002FC78 (191 KiB): RAM[0m
+[0;32mI (1107) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1112) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1118) heap_init: At 600FE06C len 00001F7C (7 KiB): RTCRAM[0m
+[0;32mI (1123) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1130) spi_flash: detected chip: boya[0m
+[0;32mI (1133) spi_flash: flash io: qio[0m
+[0;32mI (1137) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1143) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1150) main_task: Started on CPU0[0m
+[0;32mI (1174) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1174) main_task: Calling app_main()[0m
+[BOOT ] ESP32-S3 Snapshot Kit v0.1.2 sensor=OV3660(0x0000) sd_mode=OPTIONAL
+[BOOT ] idf=v5.5.1-dirty chip=ESP32-S3 rev=2 flash=16384KB psram=8192KB(OCT) reset=DEEPSLEEP
+[BOOT ] mac=28:84:85:92:2F:44
+[LED  ] init ok ws2812=gpio48(rmt) green=gpio2(active_low)
+[LED  ] buzzer init ok gpio=47 (active_high, alert=120ms/880ms)
+[OTA  ] last_result=none running=factory
+[CFG  ] littlefs total=3968KB used=12KB cfg=ok
+[CFG  ] load ok device_id=cam-2f44
+[SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[1;31mE (1305) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (1306) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[SD   ] state=FAIL -> degrade queue_mode=buffer retry=30s
+[0;32mI (1317) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (1320) cam_hal: cam init ok[0m
+[0;32mI (1322) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (1326) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (1340) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (1341) camera: Detected OV3660 camera[0m
+[0;32mI (1341) camera: Detected camera at address=0x3c[0m
+[0;32mI (1653) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1653) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (1655) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1661) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1667) cam_hal: cam config ok[0m
+[0;32mI (1682) ov3660: Calculated VCO: 200000000 Hz, PLLCLK: 200000000 Hz, SYSCLK: 50000000 Hz, PCLK: 10000000 Hz[0m
+[CAM  ] init ok sensor=OV3660 pid=0x3660 frame=VGA(640x480) q=12 xclk=20MHz fb=2xPSRAM
+[0;32mI (1704) pp: pp rom version: e7ae62f[0m
+[0;32mI (1704) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1707) wifi:wifi driver task: 3fcd0b5c, prio:23, stack:6656, core=0[0m
+[0;32mI (1716) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1716) wifi:wifi certification version: v7.0[0m
+[0;32mI (1720) wifi:config NVS flash: enabled[0m
+[0;32mI (1724) wifi:config nano formatting: disabled[0m
+[0;32mI (1728) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1733) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1737) wifi:Init management short buffer num: 32[0m
+[0;32mI (1742) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1746) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1749) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1753) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1758) wifi:Init static rx buffer num: 16[0m
+[0;32mI (1761) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1766) wifi_init: rx ba win: 16[0m
+[0;32mI (1769) wifi_init: accept mbox: 6[0m
+[0;32mI (1772) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1775) wifi_init: udp mbox: 6[0m
+[0;32mI (1778) wifi_init: tcp mbox: 6[0m
+[0;32mI (1780) wifi_init: tcp tx win: 16384[0m
+[0;32mI (1784) wifi_init: tcp rx win: 16384[0m
+[0;32mI (1787) wifi_init: tcp mss: 1440[0m
+[0;32mI (1790) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1794) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1798) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1802) wifi:Set ps type: 1, coexist: 0[0m
+
+[0;33mW (1806) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1815) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1843) wifi:mode : sta (28:84:85:92:2f:44)[0m
+[0;32mI (1844) wifi:enable tsf[0m
+[WIFI ] sta connecting ssid=HONOR
+[SYS  ] sntp start server=192.168.137.1 tz=CST-8
+[0;32mI (1851) mdns_mem: mDNS task will be created from internal RAM[0m
+[WEB  ] mdns: http://esp32s3cam.local
+[WEB  ] httpd started port=80 endpoints=ready ip=192.168.4.1
+[MQTT ] deferred -> 等 STA 拿到 IP 后再连 mqtt://192.168.137.1:1883
+[PIPE ] detector created (MSRMNP_S8_V1, lazy load)
+[0;33mW (1947) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;33mW (1992) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[PIPE ] 模型就绪 124ms，PSRAM 余量 7599KB
+[SYS  ] human detect ready: 只有检出人脸的帧才会入队上传
+[Q    ] init ok max=8 policy=drop_new backend=buffer
+[PIPE ] init ok mode=buffer last_raw_cap=2048KB psram=7782112
+[TRIG ] pir ready gpio=1 active_high debounce=300ms
+[LED  ] button init ok gpio=0 BOOT0 (active_low, short=<2000ms->人脸识别, long=5000ms->恢复出厂, boot_ignore=2000ms)
+[TRIG ] init ok armed=1 interval=3000ms timer=0ms
+[OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[SYS  ] PIR 唤醒 -> 立即触发一次抓拍
+[TRIG ] src=pir state=DEBOUNCE note=remote
+[TRIG ] src=pir state=CAPTURE note=remote count=1
+[SYS  ] heap=7827260 psram=7781716 armed=1 upload=telegram
+[0;32mI (2057) main_task: Returned from app_main()[0m
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=8389 age=552ms (早于本次请求)
+[CAM W] drop stale frame len=8447 age=517ms (早于本次请求)
+[CAM  ] grab ok len=8529 age=36ms drained=2
+[PIPE ] 体积基准未建立：丢弃本帧样本 len=8529（下一帧起生效）
+[PIPE ] grab ok len=8529 fb=0x3c280ef0 psram_after=7781732
+[0;32mI (2483) detect: pre: 6895 us[0m
+[0;32mI (2539) detect: model: 55333 us[0m
+[0;32mI (2540) detect: post: 340 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (2548) detect: pre: 6677 us[0m
+[0;32mI (2604) detect: model: 55641 us[0m
+[0;32mI (2604) detect: post: 346 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CD3 R=152 G=152 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=56ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=56ms infer=63ms len=8529
+[PIPE ] capture took=582ms flash=300ms grab=62ms retake=0
+[PIPE ] done psram=7771468 min=7771468 heap=7826080
+[0;32mI (3195) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3197) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3211) wifi:state: auth -> assoc (0x0)[0m
+[SYS  ] 进入 deep sleep: reason=work_done 唤醒源=PIR(GPIO1,高)/BOOT0(GPIO0,低)/定时
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x5 (DSLEEP),boot:0x29 (SPI_FAST_FLASH_BOOT)
+pro cpu reset by JTAG
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (26) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2026 13:33:51[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.4[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (46) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (76) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 factory          factory app      00 00 00020000 00300000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00320000 00300000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00620000 00300000[0m
+[0;32mI (102) boot:  6 littlefs         Unknown data     01 82 00920000 003e0000[0m
+[0;32mI (109) boot:  7 human_face_det   Unknown data     01 82 00d00000 00200000[0m
+[0;32mI (115) boot: End of partition table[0m
+[0;32mI (119) boot: Defaulting to factory image[0m
+[0;32mI (122) esp_image: segment 0: paddr=00020020 vaddr=3c1f0020 size=802bch (524988) map[0m
+[0;32mI (208) esp_image: segment 1: paddr=000a02e4 vaddr=3fca5800 size=05c84h ( 23684) load[0m
+[0;32mI (212) esp_image: segment 2: paddr=000a5f70 vaddr=40374000 size=0a0a8h ( 41128) load[0m
+[0;32mI (220) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=1ef7bch (2029500) map[0m
+[0;32mI (522) esp_image: segment 4: paddr=0029f7e4 vaddr=4037e0a8 size=1767ch ( 95868) load[0m
+[0;32mI (540) esp_image: segment 5: paddr=002b6e68 vaddr=50000000 size=00020h (    32) [0m
+[0;32mI (540) esp_image: segment 6: paddr=002b6e90 vaddr=600fe000 size=0006ch (   108) [0m
+[0;32mI (556) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (556) boot: Disabling RNG early entropy source...[0m
+[0;32mI (566) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (567) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (567) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (569) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (573) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (577) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (581) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (586) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (591) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (596) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (601) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (606) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (610) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (613) esp_psram: Speed: 80MHz[0m
+[0;32mI (616) cpu_start: Multicore app[0m
+[0;32mI (1052) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1060) cpu_start: Pro cpu start user code[0m
+[0;32mI (1060) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1061) app_init: Application information:[0m
+[0;32mI (1061) app_init: Project name:     esp32s3_snapshot_kit[0m
+[0;32mI (1066) app_init: App version:      0.1.2[0m
+[0;32mI (1070) app_init: Compile time:     Sep 28 2026 13:32:40[0m
+[0;32mI (1075) app_init: ELF file SHA256:  4e3053306...[0m
+[0;32mI (1079) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (1084) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1088) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1092) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1096) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1102) heap_init: At 3FCB9A98 len 0002FC78 (191 KiB): RAM[0m
+[0;32mI (1107) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1112) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1118) heap_init: At 600FE06C len 00001F7C (7 KiB): RTCRAM[0m
+[0;32mI (1123) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1130) spi_flash: detected chip: boya[0m
+[0;32mI (1133) spi_flash: flash io: qio[0m
+[0;32mI (1137) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1143) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1150) main_task: Started on CPU0[0m
+[0;32mI (1174) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1174) main_task: Calling app_main()[0m
+[BOOT ] ESP32-S3 Snapshot Kit v0.1.2 sensor=OV3660(0x0000) sd_mode=OPTIONAL
+[BOOT ] idf=v5.5.1-dirty chip=ESP32-S3 rev=2 flash=16384KB psram=8192KB(OCT) reset=DEEPSLEEP
+[BOOT ] mac=28:84:85:92:2F:44
+[LED  ] init ok ws2812=gpio48(rmt) green=gpio2(active_low)
+[LED  ] buzzer init ok gpio=47 (active_high, alert=120ms/880ms)
+[OTA  ] last_result=none running=factory
+[CFG  ] littlefs total=3968KB used=12KB cfg=ok
+[CFG  ] load ok device_id=cam-2f44
+[SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[1;31mE (1377) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (1378) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[SD   ] state=FAIL -> degrade queue_mode=buffer retry=30s
+[0;32mI (1389) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (1392) cam_hal: cam init ok[0m
+[0;32mI (1394) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (1398) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (1412) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (1413) camera: Detected OV3660 camera[0m
+[0;32mI (1413) camera: Detected camera at address=0x3c[0m
+[0;32mI (1725) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1725) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (1727) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1733) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1739) cam_hal: cam config ok[0m
+[0;32mI (1754) ov3660: Calculated VCO: 200000000 Hz, PLLCLK: 200000000 Hz, SYSCLK: 50000000 Hz, PCLK: 10000000 Hz[0m
+[CAM  ] init ok sensor=OV3660 pid=0x3660 frame=VGA(640x480) q=12 xclk=20MHz fb=2xPSRAM
+[0;32mI (1776) pp: pp rom version: e7ae62f[0m
+[0;32mI (1776) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1779) wifi:wifi driver task: 3fcd0b5c, prio:23, stack:6656, core=0[0m
+[0;32mI (1788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1788) wifi:wifi certification version: v7.0[0m
+[0;32mI (1792) wifi:config NVS flash: enabled[0m
+[0;32mI (1796) wifi:config nano formatting: disabled[0m
+[0;32mI (1800) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1805) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1809) wifi:Init management short buffer num: 32[0m
+[0;32mI (1814) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1818) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1821) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1825) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1830) wifi:Init static rx buffer num: 16[0m
+[0;32mI (1833) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1838) wifi_init: rx ba win: 16[0m
+[0;32mI (1841) wifi_init: accept mbox: 6[0m
+[0;32mI (1844) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1847) wifi_init: udp mbox: 6[0m
+[0;32mI (1850) wifi_init: tcp mbox: 6[0m
+[0;32mI (1852) wifi_init: tcp tx win: 16384[0m
+[0;32mI (1856) wifi_init: tcp rx win: 16384[0m
+[0;32mI (1859) wifi_init: tcp mss: 1440[0m
+[0;32mI (1862) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1866) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1870) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1874) wifi:Set ps type: 1, coexist: 0[0m
+
+[0;33mW (1878) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1887) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1915) wifi:mode : sta (28:84:85:92:2f:44)[0m
+[0;32mI (1916) wifi:enable tsf[0m
+[WIFI ] sta connecting ssid=HONOR
+[SYS  ] sntp start server=192.168.137.1 tz=CST-8
+[0;32mI (1923) mdns_mem: mDNS task will be created from internal RAM[0m
+[WEB  ] mdns: http://esp32s3cam.local
+[WEB  ] httpd started port=80 endpoints=ready ip=192.168.4.1
+[MQTT ] deferred -> 等 STA 拿到 IP 后再连 mqtt://192.168.137.1:1883
+[PIPE ] detector created (MSRMNP_S8_V1, lazy load)
+[0;33mW (2019) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;33mW (2065) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[PIPE ] 模型就绪 124ms，PSRAM 余量 7599KB
+[SYS  ] human detect ready: 只有检出人脸的帧才会入队上传
+[Q    ] init ok max=8 policy=drop_new backend=buffer
+[PIPE ] init ok mode=buffer last_raw_cap=2048KB psram=7782112
+[TRIG ] pir ready gpio=1 active_high debounce=300ms
+[LED  ] button init ok gpio=0 BOOT0 (active_low, short=<2000ms->人脸识别, long=5000ms->恢复出厂, boot_ignore=2000ms)
+[TRIG ] init ok armed=1 interval=3000ms timer=0ms
+[OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[SYS  ] PIR 唤醒 -> 立即触发一次抓拍
+[TRIG ] src=pir state=DEBOUNCE note=remote
+[TRIG ] src=pir state=CAPTURE note=remote count=1
+[SYS  ] heap=7827272 psram=7781716 armed=1 upload=telegram
+[0;32mI (2130) main_task: Returned from app_main()[0m
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=8400 age=552ms (早于本次请求)
+[CAM W] drop stale frame len=8475 age=517ms (早于本次请求)
+[CAM  ] grab ok len=8544 age=36ms drained=2
+[PIPE ] 体积基准未建立：丢弃本帧样本 len=8544（下一帧起生效）
+[PIPE ] grab ok len=8544 fb=0x3c280ef0 psram_after=7781732
+[0;32mI (2555) detect: pre: 6982 us[0m
+[0;32mI (2611) detect: model: 55548 us[0m
+[0;32mI (2612) detect: post: 345 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (2620) detect: pre: 6678 us[0m
+[0;32mI (2676) detect: model: 55405 us[0m
+[0;32mI (2676) detect: post: 340 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CD3 R=152 G=152 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=57ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=57ms infer=63ms len=8544
+[PIPE ] capture took=581ms flash=300ms grab=62ms retake=0
+[PIPE ] done psram=7771468 min=7771468 heap=7826092
+[0;32mI (3227) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3228) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3242) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3279) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3379) wifi:connected with HONOR, aid = 1, channel 11, 40D, bssid = 56:c2:e8:64:38:f3[0m
+[0;32mI (3379) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (3380) wifi:pm start, type: 1[0m
+
+[0;32mI (3383) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3391) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3474) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3534) wifi:<ba-add>idx:0 (ifx:0, 56:c2:e8:64:38:f3), tid:0, ssn:3, winSize:64[0m
+[LED  ] button ready after boot window: gpio=0 pressed=0
+[0;32mI (4458) esp_netif_handlers: sta ip: 192.168.137.128, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[WIFI ] connected ip=192.168.137.128 rssi=-51
+[MQTT ] start uri=mqtt://192.168.137.1:1883 topic=esp32S3_CAM/288485922F44/event
+[MQTT ] connected
+[SYS  ] 进入 deep sleep: reason=work_done 唤醒源=PIR(GPIO1,高)/BOOT0(GPIO0,低)/定时
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x5 (DSLEEP),boot:0x29 (SPI_FAST_FLASH_BOOT)
+pro cpu reset by JTAG
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (26) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2026 13:33:51[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.4[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (46) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (76) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 factory          factory app      00 00 00020000 00300000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00320000 00300000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00620000 00300000[0m
+[0;32mI (102) boot:  6 littlefs         Unknown data     01 82 00920000 003e0000[0m
+[0;32mI (109) boot:  7 human_face_det   Unknown data     01 82 00d00000 00200000[0m
+[0;32mI (115) boot: End of partition table[0m
+[0;32mI (119) boot: Defaulting to factory image[0m
+[0;32mI (122) esp_image: segment 0: paddr=00020020 vaddr=3c1f0020 size=802bch (524988) map[0m
+[0;32mI (208) esp_image: segment 1: paddr=000a02e4 vaddr=3fca5800 size=05c84h ( 23684) load[0m
+[0;32mI (212) esp_image: segment 2: paddr=000a5f70 vaddr=40374000 size=0a0a8h ( 41128) load[0m
+[0;32mI (220) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=1ef7bch (2029500) map[0m
+[0;32mI (522) esp_image: segment 4: paddr=0029f7e4 vaddr=4037e0a8 size=1767ch ( 95868) load[0m
+[0;32mI (540) esp_image: segment 5: paddr=002b6e68 vaddr=50000000 size=00020h (    32) [0m
+[0;32mI (540) esp_image: segment 6: paddr=002b6e90 vaddr=600fe000 size=0006ch (   108) [0m
+[0;32mI (556) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (556) boot: Disabling RNG early entropy source...[0m
+[0;32mI (566) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (567) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (567) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (569) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (573) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (577) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (581) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (586) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (591) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (596) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (601) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (606) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (610) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (613) esp_psram: Speed: 80MHz[0m
+[0;32mI (616) cpu_start: Multicore app[0m
+[0;32mI (1052) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1060) cpu_start: Pro cpu start user code[0m
+[0;32mI (1060) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1061) app_init: Application information:[0m
+[0;32mI (1061) app_init: Project name:     esp32s3_snapshot_kit[0m
+[0;32mI (1066) app_init: App version:      0.1.2[0m
+[0;32mI (1070) app_init: Compile time:     Sep 28 2026 13:32:40[0m
+[0;32mI (1075) app_init: ELF file SHA256:  4e3053306...[0m
+[0;32mI (1079) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (1084) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1088) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1092) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1096) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1102) heap_init: At 3FCB9A98 len 0002FC78 (191 KiB): RAM[0m
+[0;32mI (1107) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1112) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1118) heap_init: At 600FE06C len 00001F7C (7 KiB): RTCRAM[0m
+[0;32mI (1123) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1130) spi_flash: detected chip: boya[0m
+[0;32mI (1133) spi_flash: flash io: qio[0m
+[0;32mI (1137) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1143) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1150) main_task: Started on CPU0[0m
+[0;32mI (1174) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1174) main_task: Calling app_main()[0m
+[BOOT ] ESP32-S3 Snapshot Kit v0.1.2 sensor=OV3660(0x0000) sd_mode=OPTIONAL
+[BOOT ] idf=v5.5.1-dirty chip=ESP32-S3 rev=2 flash=16384KB psram=8192KB(OCT) reset=DEEPSLEEP
+[BOOT ] mac=28:84:85:92:2F:44
+[LED  ] init ok ws2812=gpio48(rmt) green=gpio2(active_low)
+[LED  ] buzzer init ok gpio=47 (active_high, alert=120ms/880ms)
+[OTA  ] last_result=none running=factory
+[CFG  ] littlefs total=3968KB used=12KB cfg=ok
+[CFG  ] load ok device_id=cam-2f44
+[SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[1;31mE (1270) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (1271) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[SD   ] state=FAIL -> degrade queue_mode=buffer retry=30s
+[0;32mI (1282) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (1285) cam_hal: cam init ok[0m
+[0;32mI (1287) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (1291) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (1305) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (1306) camera: Detected OV3660 camera[0m
+[0;32mI (1306) camera: Detected camera at address=0x3c[0m
+[0;32mI (1618) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1618) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (1620) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1626) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1632) cam_hal: cam config ok[0m
+[0;32mI (1647) ov3660: Calculated VCO: 200000000 Hz, PLLCLK: 200000000 Hz, SYSCLK: 50000000 Hz, PCLK: 10000000 Hz[0m
+[CAM  ] init ok sensor=OV3660 pid=0x3660 frame=VGA(640x480) q=12 xclk=20MHz fb=2xPSRAM
+[0;32mI (1669) pp: pp rom version: e7ae62f[0m
+[0;32mI (1669) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1672) wifi:wifi driver task: 3fcd0b5c, prio:23, stack:6656, core=0[0m
+[0;32mI (1681) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1681) wifi:wifi certification version: v7.0[0m
+[0;32mI (1685) wifi:config NVS flash: enabled[0m
+[0;32mI (1689) wifi:config nano formatting: disabled[0m
+[0;32mI (1693) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1698) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1702) wifi:Init management short buffer num: 32[0m
+[0;32mI (1707) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1711) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1714) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1718) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1723) wifi:Init static rx buffer num: 16[0m
+[0;32mI (1726) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1731) wifi_init: rx ba win: 16[0m
+[0;32mI (1734) wifi_init: accept mbox: 6[0m
+[0;32mI (1737) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1740) wifi_init: udp mbox: 6[0m
+[0;32mI (1743) wifi_init: tcp mbox: 6[0m
+[0;32mI (1745) wifi_init: tcp tx win: 16384[0m
+[0;32mI (1749) wifi_init: tcp rx win: 16384[0m
+[0;32mI (1752) wifi_init: tcp mss: 1440[0m
+[0;32mI (1755) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1759) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1763) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1767) wifi:Set ps type: 1, coexist: 0[0m
+
+[0;33mW (1771) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1780) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1807) wifi:mode : sta (28:84:85:92:2f:44)[0m
+[0;32mI (1807) wifi:enable tsf[0m
+[WIFI ] sta connecting ssid=HONOR
+[SYS  ] sntp start server=192.168.137.1 tz=CST-8
+[0;32mI (1814) mdns_mem: mDNS task will be created from internal RAM[0m
+[WEB  ] mdns: http://esp32s3cam.local
+[WEB  ] httpd started port=80 endpoints=ready ip=192.168.4.1
+[MQTT ] deferred -> 等 STA 拿到 IP 后再连 mqtt://192.168.137.1:1883
+[PIPE ] detector created (MSRMNP_S8_V1, lazy load)
+[0;33mW (1910) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;33mW (1957) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[PIPE ] 模型就绪 124ms，PSRAM 余量 7599KB
+[SYS  ] human detect ready: 只有检出人脸的帧才会入队上传
+[Q    ] init ok max=8 policy=drop_new backend=buffer
+[PIPE ] init ok mode=buffer last_raw_cap=2048KB psram=7782112
+[TRIG ] pir ready gpio=1 active_high debounce=300ms
+[LED  ] button init ok gpio=0 BOOT0 (active_low, short=<2000ms->人脸识别, long=5000ms->恢复出厂, boot_ignore=2000ms)
+[TRIG ] init ok armed=1 interval=3000ms timer=0ms
+[OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[SYS  ] PIR 唤醒 -> 立即触发一次抓拍
+[TRIG ] src=pir state=DEBOUNCE note=remote
+[TRIG ] src=pir state=CAPTURE note=remote count=1
+[SYS  ] heap=7827276 psram=7781716 armed=1 upload=telegram
+[0;32mI (2022) main_task: Returned from app_main()[0m
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=8506 age=552ms (早于本次请求)
+[CAM W] drop stale frame len=8534 age=517ms (早于本次请求)
+[CAM  ] grab ok len=8781 age=36ms drained=2
+[PIPE ] 体积基准未建立：丢弃本帧样本 len=8781（下一帧起生效）
+[PIPE ] grab ok len=8781 fb=0x3c280ef0 psram_after=7781732
+[0;32mI (2448) detect: pre: 6899 us[0m
+[0;32mI (2504) detect: model: 55680 us[0m
+[0;32mI (2505) detect: post: 345 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (2513) detect: pre: 6688 us[0m
+[0;32mI (2569) detect: model: 55415 us[0m
+[0;32mI (2570) detect: post: 345 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x94D3 R=144 G=152 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=57ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=57ms infer=63ms len=8781
+[PIPE ] capture took=582ms flash=300ms grab=62ms retake=0
+[PIPE ] done psram=7771212 min=7771212 heap=7825840
+[0;32mI (3111) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3112) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3203) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3290) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3404) wifi:connected with HONOR, aid = 1, channel 11, 40D, bssid = 56:c2:e8:64:38:f3[0m
+[0;32mI (3405) wifi:security: WPA2-PSK, phy: bgn, rssi: -44[0m
+[0;32mI (3406) wifi:pm start, type: 1[0m
+
+[0;32mI (3409) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3417) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3434) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[LED  ] button ready after boot window: gpio=0 pressed=0
+[0;32mI (4506) esp_netif_handlers: sta ip: 192.168.137.128, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[WIFI ] connected ip=192.168.137.128 rssi=-43
+[MQTT ] start uri=mqtt://192.168.137.1:1883 topic=esp32S3_CAM/288485922F44/event
+[0;32mI (4517) wifi:<ba-add>idx:0 (ifx:0, 56:c2:e8:64:38:f3), tid:0, ssn:3, winSize:64[0m
+[MQTT ] connected
+[0;32mI (6274) esp-x509-crt-bundle: Certificate validated[0m
+[TG   ] command '/snap' from chat=7960301969
+[SYS W] 唤醒脚仍在触发电平 (PIR高=1 BOOT0低=0) -> 照常入睡，可能被立即再次唤醒
+[SYS  ] 进入 deep sleep: reason=work_done 唤醒源=PIR(GPIO1,高)/BOOT0(GPIO0,低)/定时
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x5 (DSLEEP),boot:0x29 (SPI_FAST_FLASH_BOOT)
+pro cpu reset by JTAG
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (26) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2026 13:33:51[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.4[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (46) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (76) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 factory          factory app      00 00 00020000 00300000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00320000 00300000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00620000 00300000[0m
+[0;32mI (102) boot:  6 littlefs         Unknown data     01 82 00920000 003e0000[0m
+[0;32mI (109) boot:  7 human_face_det   Unknown data     01 82 00d00000 00200000[0m
+[0;32mI (115) boot: End of partition table[0m
+[0;32mI (119) boot: Defaulting to factory image[0m
+[0;32mI (122) esp_image: segment 0: paddr=00020020 vaddr=3c1f0020 size=802bch (524988) map[0m
+[0;32mI (208) esp_image: segment 1: paddr=000a02e4 vaddr=3fca5800 size=05c84h ( 23684) load[0m
+[0;32mI (212) esp_image: segment 2: paddr=000a5f70 vaddr=40374000 size=0a0a8h ( 41128) load[0m
+[0;32mI (220) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=1ef7bch (2029500) map[0m
+[0;32mI (522) esp_image: segment 4: paddr=0029f7e4 vaddr=4037e0a8 size=1767ch ( 95868) load[0m
+[0;32mI (540) esp_image: segment 5: paddr=002b6e68 vaddr=50000000 size=00020h (    32) [0m
+[0;32mI (540) esp_image: segment 6: paddr=002b6e90 vaddr=600fe000 size=0006ch (   108) [0m
+[0;32mI (556) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (556) boot: Disabling RNG early entropy source...[0m
+[0;32mI (566) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (567) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (567) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (569) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (573) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (577) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (581) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (586) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (591) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (596) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (601) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (606) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (610) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (613) esp_psram: Speed: 80MHz[0m
+[0;32mI (616) cpu_start: Multicore app[0m
+[0;32mI (1052) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1060) cpu_start: Pro cpu start user code[0m
+[0;32mI (1060) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1061) app_init: Application information:[0m
+[0;32mI (1061) app_init: Project name:     esp32s3_snapshot_kit[0m
+[0;32mI (1066) app_init: App version:      0.1.2[0m
+[0;32mI (1070) app_init: Compile time:     Sep 28 2026 13:32:40[0m
+[0;32mI (1075) app_init: ELF file SHA256:  4e3053306...[0m
+[0;32mI (1079) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (1084) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1088) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1092) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1096) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1102) heap_init: At 3FCB9A98 len 0002FC78 (191 KiB): RAM[0m
+[0;32mI (1107) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1112) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1118) heap_init: At 600FE06C len 00001F7C (7 KiB): RTCRAM[0m
+[0;32mI (1123) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1130) spi_flash: detected chip: boya[0m
+[0;32mI (1133) spi_flash: flash io: qio[0m
+[0;32mI (1137) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1143) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1150) main_task: Started on CPU0[0m
+[0;32mI (1174) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1174) main_task: Calling app_main()[0m
+[BOOT ] ESP32-S3 Snapshot Kit v0.1.2 sensor=OV3660(0x0000) sd_mode=OPTIONAL
+[BOOT ] idf=v5.5.1-dirty chip=ESP32-S3 rev=2 flash=16384KB psram=8192KB(OCT) reset=DEEPSLEEP
+[BOOT ] mac=28:84:85:92:2F:44
+[LED  ] init ok ws2812=gpio48(rmt) green=gpio2(active_low)
+[LED  ] buzzer init ok gpio=47 (active_high, alert=120ms/880ms)
+[OTA  ] last_result=none running=factory
+[CFG  ] littlefs total=3968KB used=12KB cfg=ok
+[CFG  ] load ok device_id=cam-2f44
+[SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[1;31mE (1278) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (1279) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[SD   ] state=FAIL -> degrade queue_mode=buffer retry=30s
+[0;32mI (1290) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (1293) cam_hal: cam init ok[0m
+[0;32mI (1295) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (1299) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (1313) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (1314) camera: Detected OV3660 camera[0m
+[0;32mI (1314) camera: Detected camera at address=0x3c[0m
+[0;32mI (1626) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1626) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (1628) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1634) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1640) cam_hal: cam config ok[0m
+[0;32mI (1655) ov3660: Calculated VCO: 200000000 Hz, PLLCLK: 200000000 Hz, SYSCLK: 50000000 Hz, PCLK: 10000000 Hz[0m
+[CAM  ] init ok sensor=OV3660 pid=0x3660 frame=VGA(640x480) q=12 xclk=20MHz fb=2xPSRAM
+[0;32mI (1677) pp: pp rom version: e7ae62f[0m
+[0;32mI (1677) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1680) wifi:wifi driver task: 3fcd0b5c, prio:23, stack:6656, core=0[0m
+[0;32mI (1689) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1689) wifi:wifi certification version: v7.0[0m
+[0;32mI (1693) wifi:config NVS flash: enabled[0m
+[0;32mI (1697) wifi:config nano formatting: disabled[0m
+[0;32mI (1701) wifi:Init data frame cam_hal: NO-Sdynamic rx OI - JPEG stbuffer num:art marker m 32[0m
+I (170issing
+cam_9) wifi:Inihal: cam_hal: EV-EOF-OVF
+t staticNO-SOI - JPEG rx mgmt b start markeruffer num: missing
+ 5
+[0;32mI (1720) wifi:Init management short buffer num: 32[0m
+[0;32mI (1725) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1729) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1732) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1736) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1740) wifi:Init static rx buffer num: 16[0m
+[0;32mI (1744) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1749) wifi_init: rx ba win: 16[0m
+[0;32mI (1751) wifi_init: accept mbox: 6[0m
+[0;32mI (1754) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1757) wifi_init: udp mbox: 6[0m
+[0;32mI (1760) wifi_init: tcp mbox: 6[0m
+[0;32mI (1763) wifi_init: tcp tx win: 16384[0m
+[0;32mI (1767) wifi_init: tcp rx win: 16384[0m
+[0;32mI (1770) wifi_init: tcp mss: 1440[0m
+[0;32mI (1773) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1777) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1781) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1785) wifi:Set ps type: 1, coexist: 0[0m
+
+[0;33mW (1788) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1797) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1824) wifi:mode : sta (28:84:85:92:2f:44)[0m
+[0;32mI (1825) wifi:enable tsf[0m
+[WIFI ] sta connecting ssid=HONOR
+[SYS  ] sntp start server=192.168.137.1 tz=CST-8
+[0;32mI (1833) mdns_mem: mDNS task will be created from internal RAM[0m
+[WEB  ] mdns: http://esp32s3cam.local
+[WEB  ] httpd started port=80 endpoints=ready ip=192.168.4.1
+[MQTT ] deferred -> 等 STA 拿到 IP 后再连 mqtt://192.168.137.1:1883
+[PIPE ] detector created (MSRMNP_S8_V1, lazy load)
+[0;33mW (1928) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;33mW (1973) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[PIPE ] 模型就绪 123ms，PSRAM 余量 7599KB
+[SYS  ] human detect ready: 只有检出人脸的帧才会入队上传
+[Q    ] init ok max=8 policy=drop_new backend=buffer
+[PIPE ] init ok mode=buffer last_raw_cap=2048KB psram=7782112
+[TRIG ] pir ready gpio=1 active_high debounce=300ms
+[LED  ] button init ok gpio=0 BOOT0 (active_low, short=<2000ms->人脸识别, long=5000ms->恢复出厂, boot_ignore=2000ms)
+[TRIG ] init ok armed=1 interval=3000ms timer=0ms
+[OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[SYS  ] PIR 唤醒 -> 立即触发一次抓拍
+[TRIG ] src=pir state=DEBOUNCE note=remote
+[TRIG ] src=pir state=CAPTURE note=remote count=1
+[SYS  ] heap=7827252 psram=7781716 armed=1 upload=telegram
+[0;32mI (2038) main_task: Returned from app_main()[0m
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=8521 age=560ms (早于本次请求)
+[CAM W] drop stale frame len=8561 age=525ms (早于本次请求)
+[CAM  ] grab ok len=8606 age=36ms drained=2
+[PIPE ] 体积基准未建立：丢弃本帧样本 len=8606（下一帧起生效）
+[PIPE ] grab ok len=8606 fb=0x3c280ef0 psram_after=7781732
+[0;32mI (2456) detect: pre: 6971 us[0m
+[0;32mI (2512) detect: model: 55593 us[0m
+[0;32mI (2513) detect: post: 338 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (2521) detect: pre: 6683 us[0m
+[0;32mI (2577) detect: model: 55340 us[0m
+[0;32mI (2577) detect: post: 344 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=56ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=56ms infer=63ms len=8606
+[PIPE ] capture took=574ms flash=300ms grab=54ms retake=0
+[PIPE ] done psram=7771468 min=7771468 heap=7826068
+[0;32mI (3125) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3126) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3148) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3156) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3241) wifi:connected with HONOR, aid = 1, channel 11, 40D, bssid = 56:c2:e8:64:38:f3[0m
+[0;32mI (3242) wifi:security: WPA2-PSK, phy: bgn, rssi: -48[0m
+[0;32mI (3243) wifi:pm start, type: 1[0m
+
+[0;32mI (3246) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3254) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3289) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[LED  ] button ready after boot window: gpio=0 pressed=0
+[0;32mI (4066) wifi:<ba-add>idx:0 (ifx:0, 56:c2:e8:64:38:f3), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4311) esp_netif_handlers: sta ip: 192.168.137.128, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[WIFI ] connected ip=192.168.137.128 rssi=-50
+[MQTT ] start uri=mqtt://192.168.137.1:1883 topic=esp32S3_CAM/288485922F44/event
+[SYS  ] 进入 deep sleep: reason=work_done 唤醒源=PIR(GPIO1,高)/BOOT0(GPIO0,低)/定时
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x5 (DSLEEP),boot:0x29 (SPI_FAST_FLASH_BOOT)
+pro cpu reset by JTAG
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (26) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2026 13:33:51[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.4[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (38) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (42) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (46) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (76) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 factory          factory app      00 00 00020000 00300000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00320000 00300000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00620000 00300000[0m
+[0;32mI (102) boot:  6 littlefs         Unknown data     01 82 00920000 003e0000[0m
+[0;32mI (109) boot:  7 human_face_det   Unknown data     01 82 00d00000 00200000[0m
+[0;32mI (115) boot: End of partition table[0m
+[0;32mI (119) boot: Defaulting to factory image[0m
+[0;32mI (122) esp_image: segment 0: paddr=00020020 vaddr=3c1f0020 size=802bch (524988) map[0m
+[0;32mI (208) esp_image: segment 1: paddr=000a02e4 vaddr=3fca5800 size=05c84h ( 23684) load[0m
+[0;32mI (212) esp_image: segment 2: paddr=000a5f70 vaddr=40374000 size=0a0a8h ( 41128) load[0m
+[0;32mI (220) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=1ef7bch (2029500) map[0m
+[0;32mI (522) esp_image: segment 4: paddr=0029f7e4 vaddr=4037e0a8 size=1767ch ( 95868) load[0m
+[0;32mI (540) esp_image: segment 5: paddr=002b6e68 vaddr=50000000 size=00020h (    32) [0m
+[0;32mI (540) esp_image: segment 6: paddr=002b6e90 vaddr=600fe000 size=0006ch (   108) [0m
+[0;32mI (556) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (556) boot: Disabling RNG early entropy source...[0m
+[0;32mI (566) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (567) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (567) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (569) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (573) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (577) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (581) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (586) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (591) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (596) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (601) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (606) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (610) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (613) esp_psram: Speed: 80MHz[0m
+[0;32mI (616) cpu_start: Multicore app[0m
+[0;32mI (1052) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1060) cpu_start: Pro cpu start user code[0m
+[0;32mI (1060) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1061) app_init: Application information:[0m
+[0;32mI (1061) app_init: Project name:     esp32s3_snapshot_kit[0m
+[0;32mI (1066) app_init: App version:      0.1.2[0m
+[0;32mI (1070) app_init: Compile time:     Sep 28 2026 13:32:40[0m
+[0;32mI (1075) app_init: ELF file SHA256:  4e3053306...[0m
+[0;32mI (1079) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (1084) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1088) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1092) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1096) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1102) heap_init: At 3FCB9A98 len 0002FC78 (191 KiB): RAM[0m
+[0;32mI (1107) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1112) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1118) heap_init: At 600FE06C len 00001F7C (7 KiB): RTCRAM[0m
+[0;32mI (1123) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1130) spi_flash: detected chip: boya[0m
+[0;32mI (1133) spi_flash: flash io: qio[0m
+[0;32mI (1137) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1143) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1150) main_task: Started on CPU0[0m
+[0;32mI (1174) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1174) main_task: Calling app_main()[0m
+[BOOT ] ESP32-S3 Snapshot Kit v0.1.2 sensor=OV3660(0x0000) sd_mode=OPTIONAL
+[BOOT ] idf=v5.5.1-dirty chip=ESP32-S3 rev=2 flash=16384KB psram=8192KB(OCT) reset=DEEPSLEEP
+[BOOT ] mac=28:84:85:92:2F:44
+[LED  ] init ok ws2812=gpio48(rmt) green=gpio2(active_low)
+[LED  ] buzzer init ok gpio=47 (active_high, alert=120ms/880ms)
+[OTA  ] last_result=none running=factory
+[CFG  ] littlefs total=3968KB used=12KB cfg=ok
+[CFG  ] load ok device_id=cam-2f44
+[SYS  ] wake=PIR (cause=3) sleep_en=1 poll=60000ms max_awake=30000ms
+[SD   ] mount start clk=39 cmd=38 d0=40 mode=1bit
+[1;31mE (1285) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107[0m
+[1;31mE (1286) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[SD  E] mount fail err=0x107 -> degrade queue_mode=buffer retry=30s
+[SD   ] state=FAIL -> degrade queue_mode=buffer retry=30s
+[0;32mI (1297) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (1300) cam_hal: cam init ok[0m
+[0;32mI (1302) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (1306) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (1320) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (1321) camera: Detected OV3660 camera[0m
+[0;32mI (1321) camera: Detected camera at address=0x3c[0m
+[0;32mI (1633) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1633) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (1635) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1641) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (1647) cam_hal: cam config ok[0m
+[0;32mI (1662) ov3660: Calculated VCO: 200000000 Hz, PLLCLK: 200000000 Hz, SYSCLK: 50000000 Hz, PCLK: 10000000 Hz[0m
+[CAM  ] init ok sensor=OV3660 pid=0x3660 frame=VGA(640x480) q=12 xclk=20MHz fb=2xPSRAM
+[0;32mI (1684) pp: pp rom version: e7ae62f[0m
+[0;32mI (1684) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1687) wifi:wifi driver task: 3fcd0b5c, prio:23, stack:6656, core=0[0m
+[0;32mI (1696) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1696) wifi:wifi certification version: v7.0[0m
+[0;32mI (1700) wifi:config NVS flash: enabled[0m
+[0;32mI (1704) wifi:config nano formatting: disabled[0m
+[0;32mI (1708) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1713) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1717) wifi:Init management short buffer num: 32[0m
+[0;32mI (1722) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1726) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1729) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1734) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1738) wifi:Init static rx buffer num: 16[0m
+[0;32mI (1741) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1746) wifi_init: rx ba win: 16[0m
+[0;32mI (1749) wifi_init: accept mbox: 6[0m
+[0;32mI (1752) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1755) wifi_init: udp mbox: 6[0m
+[0;32mI (1758) wifi_init: tcp mbox: 6[0m
+[0;32mI (1761) wifi_init: tcp tx win: 16384[0m
+[0;32mI (1764) wifi_init: tcp rx win: 16384[0m
+[0;32mI (1767) wifi_init: tcp mss: 1440[0m
+[0;32mI (1770) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1774) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1778) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1782) wifi:Set ps type: 1, coexist: 0[0m
+
+[0;33mW (1786) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1795) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1822) wifi:mode : sta (28:84:85:92:2f:44)[0m
+[0;32mI (1822) wifi:enable tsf[0m
+[WIFI ] sta connecting ssid=HONOR
+[SYS  ] sntp start server=192.168.137.1 tz=CST-8
+[0;32mI (1830) mdns_mem: mDNS task will be created from internal RAM[0m
+[WEB  ] mdns: http://esp32s3cam.local
+[WEB  ] httpd started port=80 endpoints=ready ip=192.168.4.1
+[MQTT ] deferred -> 等 STA 拿到 IP 后再连 mqtt://192.168.137.1:1883
+[PIPE ] detector created (MSRMNP_S8_V1, lazy load)
+[0;33mW (1926) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;33mW (1972) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[PIPE ] 模型就绪 125ms，PSRAM 余量 7599KB
+[SYS  ] human detect ready: 只有检出人脸的帧才会入队上传
+[Q    ] init ok max=8 policy=drop_new backend=buffer
+[PIPE ] init ok mode=buffer last_raw_cap=2048KB psram=7782112
+[TRIG ] pir ready gpio=1 active_high debounce=300ms
+[LED  ] button init ok gpio=0 BOOT0 (active_low, short=<2000ms->人脸识别, long=5000ms->恢复出厂, boot_ignore=2000ms)
+[TRIG ] init ok armed=1 interval=3000ms timer=0ms
+[OTA  ] 非冷启动(wake=PIR) -> 跳过上电版本检查
+[SYS  ] PIR 唤醒 -> 立即触发一次抓拍
+[TRIG ] src=pir state=DEBOUNCE note=remote
+[TRIG ] src=pir state=CAPTURE note=remote count=1
+[SYS  ] heap=7827272 psram=7781716 armed=1 upload=telegram
+[0;32mI (2037) main_task: Returned from app_main()[0m
+[PIPE ] grab start flash=300ms retake=on ref=0
+[CAM W] drop stale frame len=8477 age=552ms (早于本次请求)
+[CAM W] drop stale frame len=8695 age=517ms (早于本次请求)
+[CAM  ] grab ok len=8644 age=36ms drained=2
+[PIPE ] 体积基准未建立：丢弃本帧样本 len=8644（下一帧起生效）
+[PIPE ] grab ok len=8644 fb=0x3c280ef0 psram_after=7781732
+[0;32mI (2463) detect: pre: 6897 us[0m
+[0;32mI (2519) detect: model: 55428 us[0m
+[0;32mI (2520) detect: post: 342 us[0m
+[PIPE ] PROBE[camera] 最乐观(0.05/0.05) -> 框数=0 top=0.000 (MNP门控=0.30)
+[0;32mI (2528) detect: pre: 6788 us[0m
+[0;32mI (2584) detect: model: 55356 us[0m
+[0;32mI (2584) detect: post: 337 us[0m
+[PIPE ] DIAG msr_input shape=[1,120,160,3] dtype=3 exp=1
+[PIPE ] DIAG MSR score0 shape=[1,13,18,2]
+[PIPE ] DIAG MSR score1 shape=[1,7,9,2]
+[PIPE ] DIAG px@(320,201) raw=0x9CF3 R=152 G=156 B=152 (非肤色顺序)
+[PIPE ] 人脸检测[camera] MISS faces=0 best=0 (decode=57ms infer=63ms 640x480)
+[PIPE ] 非人形帧丢弃 src=pir phase=primary faces=0 score=0 decode=57ms infer=63ms len=8644
+[PIPE ] capture took=582ms flash=300ms grab=62ms retake=0
+[PIPE ] done psram=7771468 min=7771468 heap=7826088
+[0;32mI (3130) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3131) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3156) wifi:state: auth -> assoc (0x0)[0m

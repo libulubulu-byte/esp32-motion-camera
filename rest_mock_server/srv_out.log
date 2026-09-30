@@ -1,0 +1,21 @@
+REST mock server listening on :8081
+  device report:  POST http://<host-ip>:8081/report
+  lamp poll:      GET  http://<host-ip>:8081/lampcmd
+  dashboard:      http://localhost:8081/
+  ota firmware:   http://<host-ip>:8081/firmware/  (D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM\rest_mock_server\firmware)
+ * Serving Flask app 'server'
+ * Debug mode: off
+[11:49:46] OTA   manifest 请求来自 127.0.0.1，改写 url 主机为 192.168.0.104（否则设备会连自己的 127.0.0.1）
+[11:49:46] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[11:54:12] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[12:04:00] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[12:19:11] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[12:19:51] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[12:32:09] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[12:41:37] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[12:45:25] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[12:49:14] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[12:59:14] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[13:04:28] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[13:06:37] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin
+[13:11:12] OTA   ota.json -> v0.1.2 esp32s3_snapshot_kit.bin

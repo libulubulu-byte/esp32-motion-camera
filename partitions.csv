@@ -1,0 +1,31 @@
+# Name,   Type, SubType, Offset,  Size,     Flags
+#
+# ⚠️ otadata 是 OTA 的必需品，别删：
+#   ESP-IDF 用它记录"下次从哪个 OTA 分区启动"（两张 4KB 扇区，交替写入做掉电保护）。
+#   缺了它的表现是 —— 升级流程一路正常（下载、MD5、写 ota_0 全部成功），
+#   最后一步 esp_ota_set_boot_partition() 返回 0x105 (ESP_ERR_NOT_FOUND)，
+#   串口打印 "E esp_ota_ops: not found otadata"，
+#   镜像白写进 ota_0，bootloader 仍从 factory 启动，版本号永远不变。
+#   位置固定在 nvs 与 phy_init 之间（0x6000..0x9000 这段），长度 0x2000。
+nvs,      data, nvs,     0x9000,  0x6000,
+otadata,  data, ota,     0xf000,  0x2000,
+phy_init, data, phy,     0x11000, 0x1000,
+factory,  app,  factory, 0x20000, 0x300000,
+ota_0,    app,  ota_0,   0x320000,0x300000,
+ota_1,    app,  ota_1,   0x620000,0x300000,
+littlefs, data, spiffs,  0x920000,0x3E0000,
+#
+# ESP-WHO 人脸检测模型分区（2MB）—— ★ 未启用检测时也**必须保留** ★
+#   组件 espressif/human_face_detect 的 CMakeLists 里写死了这个名字
+#   （类型 data / 子类型 spiffs），只要该组件在依赖里，IDF 配置阶段就会
+#   到分区表里找它，找不到直接报错终止构建 —— 与
+#   CONFIG_SNAP_ENABLE_HUMAN_DETECT 是否打开无关。
+#   模型由 idf.py flash 一并烧到该分区（不占 factory 分区空间）。
+#
+# ★ 16MB flash 总账（必须 ≤ 0x1000000）：
+#     0x20000(factory) + 0x300000 + 0x600000(两张 OTA) + 0x900000
+#   = 0x20000 + 0x600000 + 0x600000 + 0x3E0000(littlefs) + 0x200000(model)
+#   = 0x1000000  ← 刚好占满，所以 littlefs 从原来的 0x6D0000 缩到 0x3E0000。
+#   实测踩坑：保留原来的 littlefs 大小会让分区表涨到 16.4MB，
+#   报 "Partitions tables occupies 16.4MB ... does not fit in 16MB"。
+human_face_det, data, spiffs, 0xD00000, 0x200000,

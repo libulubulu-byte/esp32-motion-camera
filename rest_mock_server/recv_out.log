@@ -1,0 +1,10 @@
+ESP32-S3 Snapshot Kit 本地接收服务器
+  监听地址 : 0.0.0.0:8080
+  保存目录 : D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\who_esp32S3_CAM\tools\received
+  Key 校验 : 关闭（仅打印收到的 X-Device-Key）
+  设备请填 : http://<本机局域网IP>:8080/upload
+  查本机 IP: ipconfig -> Wi-Fi 适配器的 IPv4 地址（勿用 127.0.0.1）
+  自检     : 浏览器打开 http://<本机IP>:8080/ 应返回 server=alive
+  注意     : 首次运行请允许 Windows 防火墙「专用网络」入站
+  Ctrl+C 退出
+

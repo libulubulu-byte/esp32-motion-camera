@@ -1,0 +1,32 @@
+## Freenove ESP32-S3-WROOM Snapshot Kit —— 组件管理依赖
+##
+## 版本钉死：本项目已验证的组合，不要随手升级。
+##
+## 1) esp32-camera：SCCB 仍走 IDF 的 legacy i2c 驱动（driver/i2c.h），该驱动在
+##    IDF 5.5.1 的 components/driver/i2c/i2c.c 里仍然存在（默认编译），
+##    已核对 i2c_driver_install / i2c_param_config / i2c_set_pin 语义未变。
+## 2) mdns：**IDF 5.5.1 已把 mdns 从 components/ 移出**，必须作为托管组件引入，
+##    直接在 CMakeLists 里写 `mdns` 会报 "Failed to resolve component 'mdns'"。
+##    组件名仍是 `mdns`（esp_mdns / mdns_init 那套 API），所以 PRIV_REQUIRES 里
+##    依然写 `mdns`。
+## 3) littlefs：/config.json 挂在 littlefs 分区（比 SPIFFS 更耐掉电）。
+dependencies:
+  idf:
+    version: '>=5.1.0'
+  espressif/esp32-camera: ~2.1.7
+  espressif/led_strip: ~3.0.0
+  joltwallet/littlefs: ~1.14.8
+  espressif/mdns: ^1.8.0
+  # ---- ESP-WHO 人形/人脸检测（参考 D:\Camer_esp-who\examples\human_face_recognition_custom_s3）----
+  # 说明：
+  #  1) 这两行的作用只是"把组件拉下来"，是否参与编译由菜单项
+  #     CONFIG_SNAP_ENABLE_HUMAN_DETECT 决定；关掉时 human_detect.c 会走空实现，
+  #     组件的代码仍会被链接（组件本身不会因为没被引用就不编译）。
+  #  2) human_face_detect 会把模型作为 CMake 构建产物 pack 出来，并**自动接线**到
+  #     partitions.csv 里名为 human_face_det 的分区（见该组件的 CMakeLists），
+  #     所以分区表里必须存在这一项，否则配置阶段直接报错。
+  #  3) esp-dl **不要**在这里写死大版本：human_face_detect 0.3.0 自带
+  #     `espressif/esp-dl: ~3.2.0` 约束，此处若写 ^3.3.0 会直接触发
+  #     "Version solving failed"（两者区间无交集），连配置都过不去。
+  #     由 human_face_detect 传递依赖即可，版本冲突时错误信息也足够明确。
+  espressif/human_face_detect: "^0.3.0"

@@ -1,0 +1,3 @@
+{"ok":true,"result":[{"update_id":619275658,
+"message":{"message_id":357,"from":{"id":7960301969,"is_bot":false,"first_name":"bulubulu","last_name":"li","language_code":"zh-hans"},"chat":{"id":7960301969,"first_name":"bulubulu","last_name":"li","type":"private"},"date":1790585542,"text":"/snap","entities":[{"offset":0,"length":5,"type":"bot_command"}]}},{"update_id":619275659,
+"message":{"message_id":476,"from":{"id":7960301969,"is_bot":false,"first_name":"bulubulu","last_name":"li","language_code":"zh-hans"},"chat":{"id":7960301969,"first_name":"bulubulu","last_name":"li","type":"private"},"date":1790589190,"text":"hi"}}]}

@@ -1,0 +1,170 @@
+CONFIG_IDF_TARGET="esp32s3"
+
+# ---------- PSRAM：ESP32-S3-N16R8 = 8MB Octal(OPI) PSRAM ----------
+# ★ 注意：曾经的 CONFIG_SPIRAM_TYPE_OPI **在 IDF 5.5 里已不存在**，
+#   写进 defaults 会有 "unknown kconfig symbol 'SPIRAM_TYPE_OPI'" 警告。
+#   现在 OPI 由 CONFIG_SPIRAM_MODE_OCT 单独表达（名字变了，不要写回旧的）。
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_USE_MALLOC=y
+# 小于 16KB 的分配仍走内部 RAM，避免小对象被扔进 PSRAM 拖慢中断路径
+CONFIG_SPIRAM_MALLOC_ALWAYSINTERNAL=16384
+CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP=y
+CONFIG_SPIRAM_MALLOC_RESERVE_INTERNAL=32768
+#
+# ★ ESP-WHO 人脸检测要求 ------------------------------------------------------------------
+# esp-dl 的模型存放在 flash 的 human_face_det 分区，但**权重会整块复制进 PSRAM**执行
+# （4MB 模型不可能塞进 512KB 内部 RAM）。esp-dl 的 dl_tool.cpp 用
+#     #if CONFIG_SPIRAM_RODATA || CONFIG_SPIRAM_XIP_FROM_PSRAM
+# 来判断"这个地址到底属于 PSRAM"，两个都没开时 heap_caps_malloc(MALLOC_CAP_SPIRAM)
+# 返回的指针会被判成 FLASH 地址 -> esp-dl 内部断言/加载失败。
+# 参考工程 human_face_recognition_custom_s3 也打开了这两项，这里保持一致。
+#
+# ★ 连带影响（已评估）：
+#   1) 所有 const 数据默认复制到 PSRAM，flash 里的 .rodata 段会被"搬走"，
+#      启动时多一次 memset+memcpy（实测几十毫秒），换来更快的推理速度；
+#   2) CONFIG_SPIRAM_FETCH_INSTRUCTIONS 会顺带把部分指令搬到 PSRAM，
+#      对 XIP 性能有帮助，但与 flash 加密组合有约束，本工程未启用加密，安全；
+#   3) 关掉 face detect 时这两项没有副作用，只是白占一点 PSRAM，故不做条件化。
+CONFIG_SPIRAM_RODATA=y
+CONFIG_SPIRAM_XIP_FROM_PSRAM=y
+CONFIG_SPIRAM_FETCH_INSTRUCTIONS=y
+
+# ---------- Flash：16MB QIO ----------
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+
+# ---------- 系统 ----------
+CONFIG_FREERTOS_HZ=1000
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=10
+
+# ---------- HTTP server ----------
+CONFIG_HTTPD_MAX_REQ_HDR_LEN=2048
+CONFIG_HTTPD_MAX_URI_LEN=512
+CONFIG_HTTPD_ERR_RESP_NO_DELAY=y
+
+# ---------- TLS / HTTPS ----------
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=y
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_FULL=y
+
+# ---------------------------------------------------------------------------
+# ★★ 2026-09-28：mbedtls 的内存改成用 **PSRAM**（默认是"只用内部 RAM"）★★
+#
+# 为什么必须改（真机踩到）：
+#   CONFIG_MBEDTLS_SSL_IN_CONTENT_LEN  = 16384
+#   CONFIG_MBEDTLS_SSL_OUT_CONTENT_LEN = 4096
+#   ⇒ 每条 TLS 会话光收发缓冲就吃 20KB，再加 SSL 上下文约 4KB
+#   ⇒ 默认策略下这 24KB **只能从内部 RAM 出**，8MB PSRAM 完全用不上。
+#
+#   而设备随时有 2~3 条 TLS 会话共存（Telegram 轮询 / sendPhoto / 上电 OTA 检查），
+#   内部 RAM 总共才 ~250KB ⇒ 碎片一起来就分不出连续 16KB，日志出现
+#       E esp-tls-mbedtls: mbedtls_ssl_setup returned -0x7F00   (ALLOC_FAILED)
+#       E esp-tls: create_ssl_handle failed
+#   表现为照片/TG 命令偶发失败，靠重试才发得出去。
+#
+#   改到 PSRAM 后内部 RAM 压力直接消失（代价：TLS 略慢；psram 上运行
+#   不涉及 DMA —— esp-tls 走 socket 收发，不直接从 mbedtls 缓冲做 DMA）。
+#
+# ⚠️ 它依赖 SPIRAM_USE_MALLOC=y（上面已开）。
+# ⚠️ 改完必须 idf.py fullclean 再 build —— mbedtls 的内存钩子是在
+#    编译期定死的，只增量重建可能仍链进旧的目标文件。
+# ---------------------------------------------------------------------------
+CONFIG_MBEDTLS_EXTERNAL_MEM_ALLOC=y
+CONFIG_ESP_HTTP_CLIENT_ENABLE_HTTPS=y
+CONFIG_ESP_TLS_INSECURE=n
+
+# ---------- FATFS（SD 卡） ----------
+CONFIG_FATFS_LFN_HEAP=y
+CONFIG_FATFS_MAX_LFN=255
+CONFIG_FATFS_API_ENCODING_UTF_8=y
+CONFIG_FATFS_VOLUME_COUNT=2
+
+# ---------- 分区表 ----------
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# ---------- 传感器 / SD / 功能开关 ----------
+# 注意符号名：Kconfig 里是 `choice CAMERA_SENSOR { config CAM_OV3660 }`，
+# 生成的符号是 CONFIG_CAM_OV3660（**不是** CONFIG_CAMERA_SENSOR_CAM_OV3660）。
+#
+# ★★ 2026-09-27 真机实测更正：本机摄像头模组是 **OV3660（PID=0x3660）**，不是 OV5640。
+#   原来写成 CONFIG_CAM_OV5640 导致开机的现网日志是：
+#       I (1070) ov5640: Mismatch PID=0x3660        （驱动按 OV5640 的寄存器表去读，
+#       E (1077) camera: Detected camera not supported.   读到的却是 0x3660 ⇒ 不认识）
+#       [CAM E] init failed err=0x106 (pid not compiled in) sensor=OV5640
+#       [CAM E] init failed err=0x106 -> safe mode (web only)
+#   即"按 A 型号编译、板子上插的是 B 型号"必然进 safe mode。改这一行时要连同下面的
+#   驱动裁剪段一起改，两处不同步的后果就是上面那串日志。
+CONFIG_CAM_OV3660=y
+
+# ---------- 传感器驱动裁剪（与 CONFIG_CAM_OVXXXX 一一对应，必须同步改） ----------
+# ★★ 关键陷阱（已踩、已用 sdkconfig 实测验证）：esp32-camera 2.1.7 的每一个
+#   `config XXX_SUPPORT` 都是 `bool "..." default y`，而 sdkconfig.defaults
+#   **只覆盖"写出来的那些键"** —— 没写到的键会保持它自己的 Kconfig 默认值 y。
+#   所以"只关掉我记得的那几个"是**错的**：实测 OV3640_SUPPORT 会静默留在固件里
+#   （我们根本不打算支持这型号，任务书只要求 OV2640/OV3660/OV5640 三选一）。
+#   ⇒ 必须把**除了选中那一个之外的全部驱动显式关掉**。
+#
+#   验证方法（结果应当**恰好两行**：选中的 sensor + 对应驱动，不能多也不能少）：
+#     Select-String sdkconfig -Pattern '^CONFIG_CAM_OV\w+=y$','^CONFIG_OV\w+_SUPPORT=y$'
+#   当前期望输出：
+#     CONFIG_CAM_OV3660=y
+#     CONFIG_OV3660_SUPPORT=y
+#
+#   下面的清单是从 esp32-camera 2.1.7 的 Kconfig **逐条抄下来**的，不是凭记忆，
+#   不要手写型号名 —— 写错的后果只有一句 unknown symbol 警告，
+#   而真正的驱动仍然留在固件里，属于"看起来改了其实没改"。
+#   注意 SC035HGS / GC2035 在 2.1.7 里**不存在**，写了只会多一句警告。
+CONFIG_OV3660_SUPPORT=y
+# CONFIG_OV2640_SUPPORT is not set
+# CONFIG_OV7670_SUPPORT is not set
+# CONFIG_OV7725_SUPPORT is not set
+# CONFIG_NT99141_SUPPORT is not set
+# CONFIG_OV3640_SUPPORT is not set
+# CONFIG_OV5640_SUPPORT is not set
+# CONFIG_CAMERA_AF_SUPPORT is not set
+# CONFIG_GC2145_SUPPORT is not set
+# CONFIG_GC032A_SUPPORT is not set
+# CONFIG_GC0308_SUPPORT is not set
+# CONFIG_BF3005_SUPPORT is not set
+# CONFIG_BF20A6_SUPPORT is not set
+# CONFIG_SC101IOT_SUPPORT is not set
+# CONFIG_SC101IOT_720P_15FPS_ENABLED is not set
+# CONFIG_SC101IOT_VGA_25FPS_ENABLED is not set
+# CONFIG_SC030IOT_SUPPORT is not set
+# CONFIG_SC031GS_SUPPORT is not set
+# CONFIG_HM1055_SUPPORT is not set
+# CONFIG_HM0360_SUPPORT is not set
+# CONFIG_MEGA_CCM_SUPPORT is not set
+# CONFIG_CAMERA_CONVERTER_ENABLED is not set
+
+CONFIG_SD_MODE_OPTIONAL=y
+CONFIG_SNAP_ENABLE_HTTP_UPLOAD=y
+CONFIG_SNAP_ENABLE_TELEGRAM=y
+CONFIG_SNAP_ENABLE_OTA=y
+# 下面三项默认关（任务书要求 MQTT 默认 n；stream 与 human stub 是可选功能）
+# CONFIG_SNAP_ENABLE_MQTT is not set
+# CONFIG_SNAP_ENABLE_STREAM is not set
+# CONFIG_SNAP_ENABLE_HUMAN_STUB is not set
+
+# ---------- ESP-WHO 人脸检测（可选功能，默认关） ----------
+# ★ 默认关的理由：它会占掉 2MB flash 分区 + 约 1MB PSRAM，而且**改变照片去留语义**
+#   （检测不到人的照片会被丢弃）—— 这属于使用者要明确选择的策略，不该默认生效。
+#   打开方式：把下面两行的注释去掉后重新 idf.py menuconfig 或直接 build。
+#   注意：分区表里的 human_face_det 分区**必须先存在**，与这个开关无关。
+# 调试"是不是人才上传"期间**默认打开**：验证通过后再注释掉恢复默认关。
+CONFIG_SNAP_ENABLE_HUMAN_DETECT=y
+# 检测不到人时的行为：0 = 丢弃（只记日志）；1 = 仍然存卡但不上传
+# CONFIG_SNAP_KEEP_NONHUMAN is not set
+
+# ---------- 编译期宽松度 ----------
+# 注意：-Wformat-truncation 的正规放行方式是 main/CMakeLists.txt 末尾的
+#   target_compile_options(${COMPONENT_LIB} PRIVATE "-Wno-error=format-truncation")
+# 因为 IDF 对所有组件统一加 -Wall -Werror 且没有对应 Kconfig 开关。
+# 下面这行保留（与 5.4 及更早版本兼容），不冲突。
+#
+# CONFIG_COMPILER_DISABLE_GCC12_WARNINGS 在 5.5 里已不存在；若被写在 defaults 里
+# 会生成 `# CONFIG_... is not set` 的空注释，无害但无意义，故不写。

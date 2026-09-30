@@ -1,0 +1,15 @@
+{
+  "device_id": "cam-2f44",
+  "event_id": 5,
+  "ts": 1790523555,
+  "time_valid": true,
+  "boot_ms": 59653,
+  "trigger": "pir",
+  "rssi": -37,
+  "free_heap": 8222168,
+  "free_psram": 8175748,
+  "sd_state": "FAIL",
+  "flash_used": 1,
+  "jpeg_len": 7264,
+  "sensor": "OV3660"
+}

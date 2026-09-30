@@ -1,0 +1,18 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://198.18.0.1:8081
+Press CTRL+C to quit
+127.0.0.1 - - [28/Sep/2026 11:49:47] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 11:54:12] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 12:04:00] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 12:19:11] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 12:19:51] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 12:32:09] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 12:41:37] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 12:45:25] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 12:49:14] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 12:59:14] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 13:04:28] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 13:06:37] "GET /ota.json HTTP/1.1" 200 -
+192.168.137.128 - - [28/Sep/2026 13:11:12] "GET /ota.json HTTP/1.1" 200 -
